@@ -32,12 +32,11 @@ export class MyApp {
     ];
 
 
-
-    OneSignal
     platform.ready().then(() => {
 
       //Aqui vocë coloca os dados que coletamos no passo 12 e 7
-      this.oneSignal.startInit("ebef79f2-9b94-4c8b-ad48-d7e4b304b2cc", "598492556194");
+      this.oneSignal.startInit("f8691fb0-e0c9-4d6a-b927-c795b65727c5", "190801927723");
+      // this.oneSignal.startInit("ebef79f2-9b94-4c8b-ad48-d7e4b304b2cc", "598492556194");
 
       //Aqui é caso vocë queria que o push apareça mesmo com o APP aberto
       this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
