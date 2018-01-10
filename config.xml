@@ -84,11 +84,8 @@
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
     <plugin name="cordova-plugin-camera" spec="^3.0.0" />
     <plugin name="cordova-plugin-inappbrowser" spec="^1.7.2" />
-    <plugin name="cordova-plugin-crosswalk-webview" spec="^2.3.0">
-        <variable name="XWALK_VERSION" value="23+" />
-        <variable name="XWALK_LITEVERSION" value="xwalk_core_library_canary:17+" />
-        <variable name="XWALK_COMMANDLINE" value="--disable-pull-to-refresh-effect" />
-        <variable name="XWALK_MODE" value="embedded" />
-        <variable name="XWALK_MULTIPLEAPK" value="true" />
-    </plugin>
+    <plugin name="onesignal-cordova-plugin" spec="^2.2.5" />
+    <allow-navigation href="http://10.36.26.73:8100" />
+    <allow-navigation href="http://192.168.57.1:8100" />
+    <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
 </widget>

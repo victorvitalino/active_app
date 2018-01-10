@@ -9,6 +9,7 @@ import { HabitacaoPage } from '../pages/habitacao/habitacao';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { OneSignal } from '@ionic-native/onesignal'
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    OneSignal,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

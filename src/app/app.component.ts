@@ -2,7 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import { OneSignal } from '@ionic-native/onesignal';
+// ------------------------------------------------
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { HabitacaoPage } from '../pages/habitacao/habitacao';
@@ -17,16 +18,40 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public oneSignal: OneSignal) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
+
+    // ebef79f2-9b94-4c8b-ad48-d7e4b304b2cc  chave teste onesingal
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
       { title: 'List2', component: ListPage },
       { title: 'Habitação', component: HabitacaoPage }
     ];
+
+
+
+    OneSignal
+    platform.ready().then(() => {
+
+      //Aqui vocë coloca os dados que coletamos no passo 12 e 7
+      this.oneSignal.startInit("ebef79f2-9b94-4c8b-ad48-d7e4b304b2cc", "598492556194");
+
+      //Aqui é caso vocë queria que o push apareça mesmo com o APP aberto
+      this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
+
+      //Aqui você vai tratar o recebimento do push notification com todos os dados
+      this.oneSignal.handleNotificationOpened().subscribe(data => {
+
+        console.log("Dados do Push", data);
+
+      });
+
+      this.oneSignal.endInit();
+    });
+
 
   }
 
