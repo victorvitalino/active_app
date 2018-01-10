@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { BarcodeScanner ,BarcodeScannerOptions } from '@ionic-native/barcode-scanner';
 /**
  * Generated class for the HabitacaoPage page.
  *
@@ -14,9 +14,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'habitacao.html',
 })
 export class HabitacaoPage {
+  scanData : {};
+  encodeData : string ;
+  encodedData : {} ;
+  options :BarcodeScannerOptions;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private barcodeScanner: BarcodeScanner) {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
+  scan(){
+    this.options = {
+        prompt : "Scan your barcode "
+    }
+    this.barcodeScanner.scan(this.options).then((barcodeData) => {
+
+        console.log(barcodeData);
+        this.scanData = barcodeData;
+    }, (err) => {
+        console.log("Error occured : " + err);
+    });
+  }
+
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HabitacaoPage');

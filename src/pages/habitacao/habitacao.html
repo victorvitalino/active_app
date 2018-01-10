@@ -11,5 +11,10 @@
 
 
 <ion-content padding>
-Lorem ipsum dolor sit amet
+  <button ion-button (click)="scan()">Scan ... </button>
+      <div *ngIf="scanData">
+          <p>Scanned Text : </p>
+          <p>Scanned Format : </p>
+
+      </div>
 </ion-content>
