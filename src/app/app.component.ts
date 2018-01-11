@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OneSignal } from '@ionic-native/onesignal';
@@ -25,6 +25,7 @@ export class MyApp {
   constructor(public platform: Platform,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
+    public menuCtrl: MenuController,
     public oneSignal: OneSignal,
     public dataServiceProvider: DataServiceProvider) {
     this.initializeApp();
@@ -85,8 +86,9 @@ export class MyApp {
   }
 
   gotoNav(param){
-    console.log(param)
+    // console.log(param)
     this.nav.push(param);
+    this.menuCtrl.close();
   }
 
   toggleLevel1(idx) {

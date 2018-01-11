@@ -11,7 +11,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { HabitacaoPage } from '../pages/habitacao/habitacao';
 import { LoginPage } from '../pages/login/login';
-import { QrcodePage } from '../pages/qrcode/qrcode';
+// import { QrcodePage } from '../pages/qrcode/qrcode';
 
 /* Plugins */
 import { StatusBar } from '@ionic-native/status-bar';
@@ -31,7 +31,7 @@ import { DataServiceProvider } from '../providers/data-service/data-service';
     ListPage,
     HabitacaoPage,
     LoginPage,
-    QrcodePage,
+    // QrcodePage,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +46,7 @@ import { DataServiceProvider } from '../providers/data-service/data-service';
     ListPage,
     HabitacaoPage,
     LoginPage,
-    QrcodePage,
+    // QrcodePage,
   ],
   providers: [
     StatusBar,
