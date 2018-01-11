@@ -5,7 +5,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
+  <!-- <ion-content>
     <ion-list>
       <button menuClose ion-item (click)="gotoQr(QrcodePage)">
         Qrcode
@@ -13,12 +13,27 @@
       <button menuClose ion-item (click)="gotoQr('HabitacaoPage')">
         Habitação
       </button>
-      <!-- <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button> -->
+    </ion-list>
+  </ion-content> -->
+
+
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let p of pages" text-wrap>
+         <i class="fa fa-address-book-o" aria-hidden="true"></i> {{p.category}}
+        <ion-list>
+          <ion-item *ngFor="let s of p.subs" text-wrap>
+            {{s.subcategory}}
+            <ion-list>
+              <ion-item *ngFor="let m of s.manufactures" text-wrap>
+                {{m.manufacture}}
+              </ion-item>
+            </ion-list>
+          </ion-item>
+        </ion-list>
+      </ion-item>
     </ion-list>
   </ion-content>
-
 </ion-menu>
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
