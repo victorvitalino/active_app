@@ -1,15 +1,21 @@
 [
   {
     "category":"PC",
+      "color":"blue",
+      "display":"none",
+      "component":"QrcodePage",
+      "icon":"fa-address-book-o",
     "subs": [
       {
         "subcategory":"Processor",
         "manufactures": [
           {
-            "manufacture":"Intel"
+            "manufacture":"Intel",
+            "component":"QrcodePage"
           },
           {
-            "manufacture":"AMD"
+            "manufacture":"AMD",
+            "component":"QrcodePage"
           }
         ]
       },
@@ -53,10 +59,12 @@
         "subcategory":"Notebook",
         "manufactures": [
           {
-            "manufacture":"Lenovo"
+            "manufacture":"Lenovo",
+            "component":"QrcodePage"
           },
           {
-            "manufacture":"Dell"
+            "manufacture":"Dell",
+            "component":"QrcodePage"
           }
         ]
       },

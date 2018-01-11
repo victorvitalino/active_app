@@ -4,28 +4,21 @@
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <!-- <ion-content>
-    <ion-list>
-      <button menuClose ion-item (click)="gotoQr(QrcodePage)">
-        Qrcode
-      </button>
-      <button menuClose ion-item (click)="gotoQr('HabitacaoPage')">
-        Habitação
-      </button>
-    </ion-list>
-  </ion-content> -->
-
-
   <ion-content>
     <ion-list>
-      <ion-item *ngFor="let p of pages" text-wrap>
-         <i class="fa fa-address-book-o" aria-hidden="true"></i> {{p.category}}
-        <ion-list>
-          <ion-item *ngFor="let s of p.subs" text-wrap>
-            {{s.subcategory}}
-            <ion-list>
-              <ion-item *ngFor="let m of s.manufactures" text-wrap>
+      <ion-item *ngFor="let p of pages; let i=index" text-wrap (click)="toggleLevel1('idx'+i)" [ngStyle]="{'display':getDisplay(p.display)}" [ngClass]="{active: isLevel1Shown('idx'+i)}">
+        <h4>
+          <i class="fa {{p.icon}}" aria-hidden="true"></i> {{p.category}}
+          <ion-icon color="success" item-right [name]="isLevel1Shown('idx'+i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+        </h4>
+        <ion-list *ngIf="isLevel1Shown('idx'+i)">
+          <ion-item *ngFor="let s of p.subs; let i2=index" text-wrap (click)="toggleLevel2('idx'+i+'idx'+i2)" [ngClass]="{active: isLevel2Shown('idx'+i+'idx'+i2)}">
+            <h4>
+              {{s.subcategory}}
+              <ion-icon color="success" item-right [name]="isLevel2Shown('idx'+i+'idx'+i2) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+            </h4>
+            <ion-list *ngIf="isLevel2Shown('idx'+i+'idx'+i2)">
+              <ion-item *ngFor="let m of s.manufactures" text-wrap (click)="gotoNav(m.component)">
                 {{m.manufacture}}
               </ion-item>
             </ion-list>
@@ -34,6 +27,21 @@
       </ion-item>
     </ion-list>
   </ion-content>
+
+
+
+
+
+    <!-- <ion-content>
+      <ion-list>
+        <button menuClose ion-item (click)="gotoQr(QrcodePage)">
+          Qrcode
+        </button>
+        <button menuClose ion-item (click)="gotoQr('HabitacaoPage')">
+          Habitação
+        </button>
+      </ion-list>
+    </ion-content> -->
 </ion-menu>
 
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->

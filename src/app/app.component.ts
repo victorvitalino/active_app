@@ -20,8 +20,13 @@ export class MyApp {
   rootPage: any = HomePage;
 
   pages: any;
-
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public oneSignal: OneSignal, public dataServiceProvider: DataServiceProvider) {
+  showLevel1 = null;
+  showLevel2 = null;
+  constructor(public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    public oneSignal: OneSignal,
+    public dataServiceProvider: DataServiceProvider) {
     this.initializeApp();
 
 
@@ -37,7 +42,6 @@ export class MyApp {
       { title: 'Habitação', component: HabitacaoPage },
       { title: 'Login', component: LoginPage },
       { title: 'Qrcode', component: QrcodePage }
-
       // { title: 'List', component: ListPage },
       // { title: 'List2', component: ListPage },
     ];
@@ -80,8 +84,36 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
 
-  gotoQr(param){
+  gotoNav(param){
     console.log(param)
-    this.nav.setRoot(param);
+    this.nav.push(param);
+  }
+
+  toggleLevel1(idx) {
+    if (this.isLevel1Shown(idx)) {
+      this.showLevel1 = null;
+    } else {
+      this.showLevel1 = idx;
+    }
+  };
+
+  toggleLevel2(idx) {
+    if (this.isLevel2Shown(idx)) {
+      this.showLevel1 = null;
+      this.showLevel2 = null;
+    } else {
+      this.showLevel1 = idx;
+      this.showLevel2 = idx;
+    }
+  };
+  isLevel1Shown(idx) {
+    return this.showLevel1 === idx;
+  };
+
+  isLevel2Shown(idx) {
+    return this.showLevel2 === idx;
+  };
+  getDisplay(display){
+    return display
   }
 }
