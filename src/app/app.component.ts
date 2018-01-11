@@ -9,6 +9,7 @@ import { ListPage } from '../pages/list/list';
 import { HabitacaoPage } from '../pages/habitacao/habitacao';
 import { LoginPage } from '../pages/login/login';
 import { QrcodePage } from '../pages/qrcode/qrcode';
+import { DataServiceProvider } from '../providers/data-service/data-service';
 
 @Component({
   templateUrl: 'app.html'
@@ -18,14 +19,19 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: any;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public oneSignal: OneSignal) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public oneSignal: OneSignal, public dataServiceProvider: DataServiceProvider) {
     this.initializeApp();
 
-    // used for an example of ngFor and navigation
 
-    // ebef79f2-9b94-4c8b-ad48-d7e4b304b2cc  chave teste onesingal
+    this.dataServiceProvider.getMenus()
+      .subscribe((response)=> {
+          this.pages = response;
+          console.log(this.pages);
+      });
+
+    // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Habitação', component: HabitacaoPage },
@@ -39,11 +45,11 @@ export class MyApp {
 
     platform.ready().then(() => {
 
-      //Aqui vocë coloca os dados que coletamos no passo 12 e 7
+      // ebef79f2-9b94-4c8b-ad48-d7e4b304b2cc  chave teste onesingal
       this.oneSignal.startInit("f8691fb0-e0c9-4d6a-b927-c795b65727c5", "190801927723");
       // this.oneSignal.startInit("ebef79f2-9b94-4c8b-ad48-d7e4b304b2cc", "598492556194");
 
-      //Aqui é caso vocë queria que o push apareça mesmo com o APP aberto
+      //Aqui é caso vc queria que o push apareça mesmo com o APP aberto
       this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
 
       //Aqui você vai tratar o recebimento do push notification com todos os dados
