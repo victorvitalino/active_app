@@ -7,9 +7,15 @@
 
   <ion-content>
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+      <button menuClose ion-item (click)="gotoQr(QrcodePage)">
+        Qrcode
       </button>
+      <button menuClose ion-item (click)="gotoQr('HabitacaoPage')">
+        Habitação
+      </button>
+      <!-- <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button> -->
     </ion-list>
   </ion-content>
 

@@ -7,6 +7,8 @@ import { OneSignal } from '@ionic-native/onesignal';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { HabitacaoPage } from '../pages/habitacao/habitacao';
+import { LoginPage } from '../pages/login/login';
+import { QrcodePage } from '../pages/qrcode/qrcode';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,9 +28,12 @@ export class MyApp {
     // ebef79f2-9b94-4c8b-ad48-d7e4b304b2cc  chave teste onesingal
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
-      { title: 'List2', component: ListPage },
-      { title: 'Habitação', component: HabitacaoPage }
+      { title: 'Habitação', component: HabitacaoPage },
+      { title: 'Login', component: LoginPage },
+      { title: 'Qrcode', component: QrcodePage }
+
+      // { title: 'List', component: ListPage },
+      // { title: 'List2', component: ListPage },
     ];
 
 
@@ -67,5 +72,10 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  gotoQr(param){
+    console.log(param)
+    this.nav.setRoot(param);
   }
 }
