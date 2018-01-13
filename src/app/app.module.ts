@@ -11,7 +11,8 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { HabitacaoPage } from '../pages/habitacao/habitacao';
 import { LoginPage } from '../pages/login/login';
-// import { QrcodePage } from '../pages/qrcode/qrcode';
+import { QrcodePage } from '../pages/qrcode/qrcode';
+import { HabitationPage } from '../pages/habitation/habitation';
 
 /* Plugins */
 import { StatusBar } from '@ionic-native/status-bar';
@@ -19,8 +20,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { OneSignal } from '@ionic-native/onesignal';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocationResponse } from '@ionic-native/background-geolocation';
-
+// import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocationResponse } from '@ionic-native/background-geolocation';
+import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file';
+import { Camera } from '@ionic-native/camera';
 /* Services / Providers */
 import { DataServiceProvider } from '../providers/data-service/data-service';
 
@@ -32,7 +35,6 @@ import { DataServiceProvider } from '../providers/data-service/data-service';
     ListPage,
     HabitacaoPage,
     LoginPage,
-    // QrcodePage,
   ],
   imports: [
     BrowserModule,
@@ -47,15 +49,18 @@ import { DataServiceProvider } from '../providers/data-service/data-service';
     ListPage,
     HabitacaoPage,
     LoginPage,
-    // QrcodePage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     OneSignal,
     BarcodeScanner,
-    BackgroundGeolocation,
+    // BackgroundGeolocation,
     InAppBrowser,
+    FileTransfer,
+    FileTransferObject,
+    File,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DataServiceProvider,
   ]

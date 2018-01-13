@@ -21,7 +21,7 @@ export class DataServiceProvider {
   getMenus(){
     // http://www.codhab.df.gov.br/portal/images/menus.json para testes no dispositivo.
     // /assets/data/menus.json testes local
-    return this.http.get('/assets/data/menus.json')
+    return this.http.get('assets/data/menus.json')
       .map((response: Response) => response)
   }
 }

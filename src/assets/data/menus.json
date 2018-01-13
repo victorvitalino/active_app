@@ -2,20 +2,19 @@
   {
     "category":"PC",
       "color":"blue",
-      "display":"none",
-      "component":"QrcodePage",
+      "display":"block",
       "icon":"fa-address-book-o",
     "subs": [
       {
         "subcategory":"Processor",
         "manufactures": [
           {
-            "manufacture":"Intel",
+            "manufacture":"QrCode",
             "component":"QrcodePage"
           },
           {
-            "manufacture":"AMD",
-            "component":"QrcodePage"
+            "manufacture":"Habitação",
+            "component":"HabitationPage"
           }
         ]
       },

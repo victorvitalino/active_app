@@ -3,7 +3,7 @@ import { Nav, Platform, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OneSignal } from '@ionic-native/onesignal';
-import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocationResponse } from '@ionic-native/background-geolocation';
+// import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocationResponse } from '@ionic-native/background-geolocation';
 
 // ------------------------------------------------
 import { HomePage } from '../pages/home/home';
@@ -11,6 +11,7 @@ import { ListPage } from '../pages/list/list';
 import { HabitacaoPage } from '../pages/habitacao/habitacao';
 import { LoginPage } from '../pages/login/login';
 import { QrcodePage } from '../pages/qrcode/qrcode';
+import { HabitationPage } from '../pages/habitation/habitation';
 import { DataServiceProvider } from '../providers/data-service/data-service';
 
 @Component({
@@ -29,7 +30,7 @@ export class MyApp {
     public splashScreen: SplashScreen,
     public menuCtrl: MenuController,
     public oneSignal: OneSignal,
-    public backgroundGeolocation: BackgroundGeolocation,
+    // public backgroundGeolocation: BackgroundGeolocation,
     public dataServiceProvider: DataServiceProvider) {
     this.initializeApp();
 
@@ -40,31 +41,39 @@ export class MyApp {
           console.log(this.pages);
       });
 
-    const config: BackgroundGeolocationConfig = {
-                desiredAccuracy: 10,
-                stationaryRadius: 20,
-                distanceFilter: 30,
-                debug: true, //  enable this hear sounds for background-geolocation life-cycle.
-                stopOnTerminate: false, // enable this to clear background location settings when the app terminates
-        };
 
-      this.backgroundGeolocation.configure(config)
-        .subscribe((location: BackgroundGeolocationResponse) => {
 
-          console.log(location);
 
-          // IMPORTANT:  You must execute the finish method here to inform the native plugin that you're finished,
-          // and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
-          // IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
-          this.backgroundGeolocation.finish(); // FOR IOS ONLY
+      /* === BackgroundGeolocation Aqui, precisando revisar por isso está comentado.
+        Para ativa-lo descomente a variável no construtor e os imports na app.component, app.module e providers.
 
-        });
+       */
+
+    // const config: BackgroundGeolocationConfig = {
+    //             desiredAccuracy: 10,
+    //             stationaryRadius: 20,
+    //             distanceFilter: 30,
+    //             debug: true, //  enable this hear sounds for background-geolocation life-cycle.
+    //             stopOnTerminate: false, // enable this to clear background location settings when the app terminates
+    //     };
     //
-    // // start recording location
-    this.backgroundGeolocation.start();
+    //   this.backgroundGeolocation.configure(config)
+    //     .subscribe((location: BackgroundGeolocationResponse) => {
     //
-    // // If you wish to turn OFF background-tracking, call the #stop method.
-    // this.backgroundGeolocation.stop();
+    //       console.log(location);
+    //
+    //       // IMPORTANT:  You must execute the finish method here to inform the native plugin that you're finished,
+    //       // and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
+    //       // IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
+    //       this.backgroundGeolocation.finish(); // FOR IOS ONLY
+    //
+    //     });
+    // //
+    // // // start recording location
+    // this.backgroundGeolocation.start();
+    // //
+    // // // If you wish to turn OFF background-tracking, call the #stop method.
+    // // this.backgroundGeolocation.stop();
 
 
 
@@ -111,10 +120,16 @@ export class MyApp {
 
   gotoNav(param){
     // console.log(param)
+    //Função para navegação do sidebar
     this.nav.push(param);
     this.menuCtrl.close();
   }
+  getDisplay(display){
+    //Função para ativar e desativar menu
+    return display
+  }
 
+// Conjunto de funções do Toggle do Sidebar
   toggleLevel1(idx) {
     if (this.isLevel1Shown(idx)) {
       this.showLevel1 = null;
@@ -139,7 +154,5 @@ export class MyApp {
   isLevel2Shown(idx) {
     return this.showLevel2 === idx;
   };
-  getDisplay(display){
-    return display
-  }
+
 }

@@ -22,7 +22,10 @@
     "@angular/platform-browser-dynamic": "5.0.1",
     "@ionic-native/background-geolocation": "^4.5.2",
     "@ionic-native/barcode-scanner": "^4.5.2",
+    "@ionic-native/camera": "^4.5.2",
     "@ionic-native/core": "4.4.0",
+    "@ionic-native/file": "^4.5.2",
+    "@ionic-native/file-transfer": "^4.5.2",
     "@ionic-native/in-app-browser": "^4.4.2",
     "@ionic-native/onesignal": "^4.5.2",
     "@ionic-native/splash-screen": "4.4.0",
@@ -33,6 +36,8 @@
     "cordova-plugin-camera": "^3.0.0",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-device": "^1.1.4",
+    "cordova-plugin-file": "^6.0.1",
+    "cordova-plugin-file-transfer": "^1.7.0",
     "cordova-plugin-inappbrowser": "^1.7.2",
     "cordova-plugin-ionic-webview": "^1.1.16",
     "cordova-plugin-mauron85-background-geolocation": "^2.3.3",
@@ -78,7 +83,9 @@
         "ACCOUNT_LABEL": "@string/app_name",
         "ACCOUNT_TYPE": "$PACKAGE_NAME.account",
         "CONTENT_AUTHORITY": "$PACKAGE_NAME"
-      }
+      },
+      "cordova-plugin-file": {},
+      "cordova-plugin-file-transfer": {}
     },
     "platforms": [
       "android"
