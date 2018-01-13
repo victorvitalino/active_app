@@ -24,6 +24,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 import { Camera } from '@ionic-native/camera';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 /* Services / Providers */
 import { DataServiceProvider } from '../providers/data-service/data-service';
 
@@ -61,6 +62,7 @@ import { DataServiceProvider } from '../providers/data-service/data-service';
     FileTransferObject,
     File,
     Camera,
+    GoogleAnalytics,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DataServiceProvider,
   ]

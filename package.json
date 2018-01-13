@@ -26,6 +26,7 @@
     "@ionic-native/core": "4.4.0",
     "@ionic-native/file": "^4.5.2",
     "@ionic-native/file-transfer": "^4.5.2",
+    "@ionic-native/google-analytics": "^4.5.2",
     "@ionic-native/in-app-browser": "^4.4.2",
     "@ionic-native/onesignal": "^4.5.2",
     "@ionic-native/splash-screen": "4.4.0",
@@ -38,6 +39,7 @@
     "cordova-plugin-device": "^1.1.4",
     "cordova-plugin-file": "^6.0.1",
     "cordova-plugin-file-transfer": "^1.7.0",
+    "cordova-plugin-google-analytics": "^1.8.3",
     "cordova-plugin-inappbrowser": "^1.7.2",
     "cordova-plugin-ionic-webview": "^1.1.16",
     "cordova-plugin-mauron85-background-geolocation": "^2.3.3",
@@ -85,7 +87,8 @@
         "CONTENT_AUTHORITY": "$PACKAGE_NAME"
       },
       "cordova-plugin-file": {},
-      "cordova-plugin-file-transfer": {}
+      "cordova-plugin-file-transfer": {},
+      "cordova-plugin-google-analytics": {}
     },
     "platforms": [
       "android"

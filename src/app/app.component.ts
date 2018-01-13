@@ -3,6 +3,7 @@ import { Nav, Platform, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OneSignal } from '@ionic-native/onesignal';
+import { GoogleAnalytics } from '@ionic-native/google-analytics';
 // import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocationResponse } from '@ionic-native/background-geolocation';
 
 // ------------------------------------------------
@@ -31,10 +32,21 @@ export class MyApp {
     public menuCtrl: MenuController,
     public oneSignal: OneSignal,
     // public backgroundGeolocation: BackgroundGeolocation,
+    private ga: GoogleAnalytics,
     public dataServiceProvider: DataServiceProvider) {
     this.initializeApp();
 
+    this.ga.startTrackerWithId('UA-96549234-1')
+     .then(() => {
+       console.log('Google analytics is ready now');
+          this.ga.trackView('test');
+       // Tracker is ready
+       // You can now track pages or set additional information such as AppVersion or UserId
+     })
+     .catch(e => console.log('Error starting GoogleAnalytics', e));
 
+
+    // Disparo do provider para pegar os menus
     this.dataServiceProvider.getMenus()
       .subscribe((response)=> {
           this.pages = response;
@@ -100,6 +112,7 @@ export class MyApp {
 
 
   }
+
 
   initializeApp() {
     this.platform.ready().then(() => {
