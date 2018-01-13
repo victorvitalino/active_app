@@ -29,6 +29,7 @@ export class MyApp {
     public splashScreen: SplashScreen,
     public menuCtrl: MenuController,
     public oneSignal: OneSignal,
+    public backgroundGeolocation: BackgroundGeolocation,
     public dataServiceProvider: DataServiceProvider) {
     this.initializeApp();
 
@@ -39,15 +40,34 @@ export class MyApp {
           console.log(this.pages);
       });
 
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Habitação', component: HabitacaoPage },
-      { title: 'Login', component: LoginPage },
-      { title: 'Qrcode', component: QrcodePage }
-      // { title: 'List', component: ListPage },
-      // { title: 'List2', component: ListPage },
-    ];
+    const config: BackgroundGeolocationConfig = {
+                desiredAccuracy: 10,
+                stationaryRadius: 20,
+                distanceFilter: 30,
+                debug: true, //  enable this hear sounds for background-geolocation life-cycle.
+                stopOnTerminate: false, // enable this to clear background location settings when the app terminates
+        };
+
+      this.backgroundGeolocation.configure(config)
+        .subscribe((location: BackgroundGeolocationResponse) => {
+
+          console.log(location);
+
+          // IMPORTANT:  You must execute the finish method here to inform the native plugin that you're finished,
+          // and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
+          // IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
+          this.backgroundGeolocation.finish(); // FOR IOS ONLY
+
+        });
+    //
+    // // start recording location
+    this.backgroundGeolocation.start();
+    //
+    // // If you wish to turn OFF background-tracking, call the #stop method.
+    // this.backgroundGeolocation.stop();
+
+
+
 
 
     platform.ready().then(() => {
@@ -78,6 +98,8 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+
     });
   }
 

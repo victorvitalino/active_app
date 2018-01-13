@@ -54,6 +54,7 @@ import { DataServiceProvider } from '../providers/data-service/data-service';
     SplashScreen,
     OneSignal,
     BarcodeScanner,
+    BackgroundGeolocation,
     InAppBrowser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DataServiceProvider,
