@@ -1,9 +1,5 @@
 <ion-menu [content]="content" id="menu-material">
   <ion-content>
-    <!-- <img src="assets/imgs/bsb3.jpg"/>
-    <ion-thumbnail item-right>
-      <img src="assets/imgs/bsb3.jpg">
-    </ion-thumbnail> -->
     <div class="menu-header">
       <!--material-design-background-->
       <img class="user-avatar round" style="height:90px;max-width:90px;" [src]="chosenPicture || placeholder" onerror="this.src='assets/imgs/logo.png'"
@@ -13,22 +9,23 @@
     </div>
     <ion-list no-lines>
       <ion-item menuClose (click)="openPage(HomePage)">
-        <h3>
-          <ion-icon md-name="track_changes"></ion-icon>
-          Tela inicial
-          <ion-icon color="success" item-right></ion-icon>
-        </h3>
+        <div class="item-side">
+            <ion-icon name="ios-home-outline" class="icon-custom-side"></ion-icon>
+          <span>Tela inicial</span>
+        </div>
       </ion-item>
-      <ion-item *ngFor="let p of pages; let i=index" text-wrap (click)="toggleLevel1('idx'+i)" [ngStyle]="{'display':getDisplay(p.display),'color':getColor(p.color)}">
-          <i class="fa {{p.icon}}" aria-hidden="true"></i>
-          {{p.category}}
+      <ion-item *ngFor="let p of pages; let i=index" text-wrap (click)="toggleLevel1('idx'+i)" [ngStyle]="{'display':getDisplay(p.display)}">
+          <div class="item-side">
+            <ion-icon name="ios-home-outline" class="icon-custom-side" [ngStyle]="{'color':getColor(p.color)}"></ion-icon>
+           
+            <span>{{p.category}}</span>
+          </div>
         <ion-list *ngIf="isLevel1Shown('idx'+i)">
-          <button ion-item *ngFor="let s of p.subs; let i2=index" text-wrap menuClose (click)="gotoNav(s.component)" [ngClass]="{active: isLevel2Shown('idx'+i+'idx'+i2)}">
-            <h4>
-              {{s.subcategory}}
-              <ion-icon color="success" item-right></ion-icon>
-            </h4>
-          </button>
+          <ion-item class="item-custom-side" *ngFor="let s of p.subs; let i2=index" text-wrap menuClose (click)="gotoNav(s.component)" [ngClass]="{active: isLevel2Shown('idx'+i+'idx'+i2)}">
+            <div class="item-side custom-side-link">
+              <span>{{s.subcategory}}</span>
+            </div>
+          </ion-item>
         </ion-list>
       </ion-item>
     </ion-list>

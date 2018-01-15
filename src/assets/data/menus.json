@@ -1,9 +1,9 @@
 [
   {
     "category":"Habitação",
-      "color":"#3a8d6e",
+      "color":"#eaaf00",
       "display":"block",
-      "icon":"fa-address-book-o",
+      "icon":"ion-ios-home-outline",
     "subs": [
       {
         "subcategory":"QrCode",
@@ -21,7 +21,7 @@
   },
   {
     "category":"Habitação",
-      "color":"#3a8d6e",
+      "color":"#eaaf00",
       "display":"block",
       "icon":"fa-address-book-o",
     "subs": [
@@ -33,7 +33,7 @@
   },
   {
     "category":"Habitação",
-      "color":"blue",
+      "color":"#eaaf00",
       "display":"block",
       "icon":"fa-address-book-o",
     "subs": [
@@ -45,7 +45,7 @@
   },
   {
     "category":"Habitação",
-      "color":"blue",
+      "color":"#f6525",
       "display":"block",
       "icon":"fa-address-book-o",
     "subs": [
