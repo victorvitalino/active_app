@@ -1,124 +1,57 @@
 [
   {
-    "category":"PC",
+    "category":"Habitação",
+      "color":"#3a8d6e",
+      "display":"block",
+      "icon":"fa-address-book-o",
+    "subs": [
+      {
+        "subcategory":"QrCode",
+        "component": "QrcodePage"
+      },
+      {
+        "subcategory":"Habitação",
+        "component": "HabitationPage"
+      },
+      {
+        "subcategory":"QrCode",
+        "component": "QrcodePage"
+      }
+    ]
+  },
+  {
+    "category":"Habitação",
+      "color":"#3a8d6e",
+      "display":"block",
+      "icon":"fa-address-book-o",
+    "subs": [
+      {
+        "subcategory":"QrCode",
+        "component": "QrcodePage"
+      }
+    ]
+  },
+  {
+    "category":"Habitação",
       "color":"blue",
       "display":"block",
       "icon":"fa-address-book-o",
     "subs": [
       {
-        "subcategory":"Processor",
-        "manufactures": [
-          {
-            "manufacture":"QrCode",
-            "component":"QrcodePage"
-          },
-          {
-            "manufacture":"Habitação",
-            "component":"HabitationPage"
-          }
-        ]
-      },
-      {
-        "subcategory":"Motherboard",
-        "manufactures": [
-          {
-            "manufacture":"Asus"
-          },
-          {
-            "manufacture":"AMD"
-          },
-          {
-            "manufacture":"GigaByte"
-          },
-          {
-            "manufacture":"Intel"
-          }
-        ]
-      },
-      {
-        "subcategory":"Memory",
-        "manufactures": [
-          {
-            "manufacture":"Visipro"
-          },
-          {
-            "manufacture":"Crucial"
-          },
-          {
-            "manufacture":"VenomRX"
-          }
-        ]
+        "subcategory":"QrCode",
+        "component": "QrcodePage"
       }
     ]
   },
   {
-    "category":"Laptop",
+    "category":"Habitação",
+      "color":"blue",
+      "display":"block",
+      "icon":"fa-address-book-o",
     "subs": [
       {
-        "subcategory":"Notebook",
-        "manufactures": [
-          {
-            "manufacture":"Lenovo",
-            "component":"QrcodePage"
-          },
-          {
-            "manufacture":"Dell",
-            "component":"QrcodePage"
-          }
-        ]
-      },
-      {
-        "subcategory":"Netbook",
-        "manufactures": [
-          {
-            "manufacture":"Lenovo"
-          },
-          {
-            "manufacture":"Dell"
-          },
-          {
-            "manufacture":"Acer"
-          },
-          {
-            "manufacture":"HP"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "category":"Printer",
-    "subs": [
-      {
-        "subcategory":"Laserjet",
-        "manufactures": [
-          {
-            "manufacture":"HP"
-          },
-          {
-            "manufacture":"Brother"
-          },
-          {
-            "manufacture":"Canon"
-          },
-          {
-            "manufacture":"Samsung"
-          }
-        ]
-      },
-      {
-        "subcategory":"Deskjet",
-        "manufactures": [
-          {
-            "manufacture":"HP"
-          },
-          {
-            "manufacture":"Canon"
-          },
-          {
-            "manufacture":"Epson"
-          }
-        ]
+        "subcategory":"QrCode",
+        "component": "QrcodePage"
       }
     ]
   }

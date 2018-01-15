@@ -126,20 +126,22 @@ export class MyApp {
   }
 
   openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    this.nav.setRoot(HomePage);
   }
 
   gotoNav(param){
     // console.log(param)
     //Função para navegação do sidebar
     this.nav.push(param);
-    this.menuCtrl.close();
+    // this.menuCtrl.close();
   }
   getDisplay(display){
     //Função para ativar e desativar menu
     return display
+  }
+  getColor(color){
+    //Função para mudar cor do menu
+    return color
   }
 
 // Conjunto de funções do Toggle do Sidebar
@@ -151,6 +153,10 @@ export class MyApp {
     }
   };
 
+  isLevel1Shown(idx) {
+    return this.showLevel1 === idx;
+  };
+
   toggleLevel2(idx) {
     if (this.isLevel2Shown(idx)) {
       this.showLevel1 = null;
@@ -159,9 +165,6 @@ export class MyApp {
       this.showLevel1 = idx;
       this.showLevel2 = idx;
     }
-  };
-  isLevel1Shown(idx) {
-    return this.showLevel1 === idx;
   };
 
   isLevel2Shown(idx) {
