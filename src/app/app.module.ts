@@ -28,7 +28,7 @@ import { Camera } from '@ionic-native/camera';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 /* Services / Providers */
 import { DataServiceProvider } from '../providers/data-service/data-service';
-
+import { QrcodePageModule } from '../pages/qrcode/qrcode.module'
 
 @NgModule({
   declarations: [
@@ -37,11 +37,13 @@ import { DataServiceProvider } from '../providers/data-service/data-service';
     ListPage,
     HabitacaoPage,
     LoginPage,
+    // QrcodePage,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     HttpClientModule,
+    QrcodePageModule,
     MaterialIconsModule,
     IonicModule.forRoot(MyApp),
   ],
@@ -52,6 +54,7 @@ import { DataServiceProvider } from '../providers/data-service/data-service';
     ListPage,
     HabitacaoPage,
     LoginPage,
+    QrcodePage,
   ],
   providers: [
     StatusBar,
