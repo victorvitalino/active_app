@@ -49,6 +49,7 @@
     "font-awesome": "4.7.0",
     "ionic-angular": "3.9.2",
     "ionic-plugin-keyboard": "^2.2.1",
+    "ionic2-material-icons": "^1.0.3",
     "ionicons": "3.0.0",
     "onesignal-cordova-plugin": "^2.2.5",
     "phonegap-plugin-barcodescanner": "^7.0.1",

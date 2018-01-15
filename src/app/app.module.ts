@@ -15,6 +15,7 @@ import { QrcodePage } from '../pages/qrcode/qrcode';
 import { HabitationPage } from '../pages/habitation/habitation';
 
 /* Plugins */
+import { MaterialIconsModule } from 'ionic2-material-icons';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OneSignal } from '@ionic-native/onesignal';
@@ -41,6 +42,7 @@ import { DataServiceProvider } from '../providers/data-service/data-service';
     BrowserModule,
     HttpModule,
     HttpClientModule,
+    MaterialIconsModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
