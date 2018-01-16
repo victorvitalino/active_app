@@ -2,21 +2,21 @@
   <ion-content>
     <div class="menu-header">
       <!--material-design-background-->
-      <img class="user-avatar round" style="height:90px;max-width:90px;" [src]="chosenPicture || placeholder" onerror="this.src='assets/imgs/logo.png'"
+      <img class="user-avatar round" style="height:90px;max-width:90px;" [src]="chosenPicture || placeholder" onerror="this.src='assets/img/avatar/profile-1.jpg'"
       />
-      <p class="name">OST</p>
-      <p class="e-mail">codhab.df.gov.br</p>
+      <p class="name">Maria de Jesus</p>
+      <p class="e-mail">Posição: 479º</p>
     </div>
     <ion-list no-lines>
       <ion-item menuClose (click)="openPage(HomePage)">
         <div class="item-side">
-            <ion-icon name="ios-home-outline" class="icon-custom-side"></ion-icon>
+          <ion-icon name="ios-menu-outline" class="icon-custom-side"></ion-icon>
           <span>Tela inicial</span>
         </div>
       </ion-item>
       <ion-item *ngFor="let p of pages; let i=index" text-wrap (click)="toggleLevel1('idx'+i)" [ngStyle]="{'display':getDisplay(p.display)}">
           <div class="item-side">
-            <ion-icon name="ios-home-outline" class="icon-custom-side" [ngStyle]="{'color':getColor(p.color)}"></ion-icon>
+            <ion-icon name="{{p.icon}}" class="icon-custom-side" [ngStyle]="{'color':getColor(p.color)}"></ion-icon>
            
             <span>{{p.category}}</span>
           </div>

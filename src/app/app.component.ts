@@ -12,6 +12,7 @@ import { ListPage } from '../pages/list/list';
 import { HabitacaoPage } from '../pages/habitacao/habitacao';
 import { LoginPage } from '../pages/login/login';
 import { QrcodePage } from '../pages/qrcode/qrcode';
+import { HometwoPage } from '../pages/hometwo/hometwo';
 import { HabitationPage } from '../pages/habitation/habitation';
 import { DataServiceProvider } from '../providers/data-service/data-service';
 
@@ -45,6 +46,7 @@ export class MyApp {
      })
      .catch(e => console.log('Error starting GoogleAnalytics', e));
 
+     
 
     // Disparo do provider para pegar os menus
     this.dataServiceProvider.getMenus()

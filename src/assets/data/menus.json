@@ -3,7 +3,7 @@
     "category":"Habitação",
       "color":"#eaaf00",
       "display":"block",
-      "icon":"ion-ios-home-outline",
+      "icon":"ios-home-outline",
     "subs": [
       {
         "subcategory":"QrCode",
@@ -14,16 +14,16 @@
         "component": "HabitationPage"
       },
       {
-        "subcategory":"QrCode",
-        "component": "QrcodePage"
+        "subcategory":"Home2",
+        "component": "HometwoPage"
       }
     ]
   },
   {
-    "category":"Habitação",
+    "category":"Regularização",
       "color":"#eaaf00",
       "display":"block",
-      "icon":"fa-address-book-o",
+      "icon":"ios-document-outline",
     "subs": [
       {
         "subcategory":"QrCode",
@@ -32,10 +32,10 @@
     ]
   },
   {
-    "category":"Habitação",
+    "category":"Entidades",
       "color":"#eaaf00",
       "display":"block",
-      "icon":"fa-address-book-o",
+      "icon":"ios-people-outline",
     "subs": [
       {
         "subcategory":"QrCode",
@@ -47,7 +47,7 @@
     "category":"Habitação",
       "color":"#f6525",
       "display":"block",
-      "icon":"fa-address-book-o",
+      "icon":"ios-lock-outline",
     "subs": [
       {
         "subcategory":"QrCode",

@@ -16,7 +16,7 @@
 // automatically applied to the <body> element in the app.
 
 .btn-nav-codhab{
-	height: 100px;
+  height: 100px;
 	width: 100px;
 	margin: 0 auto;
 	display: block;
@@ -28,23 +28,6 @@
 }
 .icon-page-home{
   font-size:65px;
-}
-.icon-custom-side{
-  font-size: 25px!important;
-}
-.custom-side-link{
-  margin-left: 20px;
-}
-.item-custom-side .input-wrapper{
-  height: 40px;
-
-}
-.item-custom-side .input-wrapper .label-md{
-  margin: 10px 8px 10px 0!important;
-}
-.item-side span{
-  margin-left:10px!important;
-  font-size: 15px!important;
 }
 .btn-nav-codhab.activated{
 	background-color: #353535!important;
@@ -117,5 +100,49 @@
     padding: .5em;
     height: 12vh;
   }
- 
+  // .item-custom-side .input-wrapper .label-md{
+  //   margin:0 8px 0 0!important;
+  // }
+  .item-block{
+    min-height: 20px!important
+  }
+  .item-md{
+   padding-left: 0;
+  }
+  .label-md {
+    margin: 5px 0px;
+  }
+  .icon-custom-side{
+    margin-left: 20px;
+  }
+  .custom-side-link{
+    margin-left: 42px;
+    padding: 8px 0; 
+  }
+  .item-md.item-block .item-inner{
+    padding:0;
+  }
+  .list-md{
+    margin:0;
+  }
+  .list .list-md{
+    background-color: #808080;
+  }
+  .icon-custom-side{
+  font-size: 25px!important;
+  }
+  .item-custom-side{
+    background-color: #d8d8d8;
+    color:#3a3a3a;
+    font-weight: bold;
+  }
+  .item-side{
+    padding: 10px 0;
+  }
+  .item-side span{
+    margin-left:10px!important;
+    font-size: 15px!important;
+    color:#3a3a3a;
+    font-weight: bold;
+  }
 }

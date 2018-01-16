@@ -12,6 +12,7 @@ import { ListPage } from '../pages/list/list';
 import { HabitacaoPage } from '../pages/habitacao/habitacao';
 import { LoginPage } from '../pages/login/login';
 import { QrcodePage } from '../pages/qrcode/qrcode';
+import { HometwoPage } from '../pages/hometwo/hometwo';
 import { HabitationPage } from '../pages/habitation/habitation';
 
 /* Plugins */
@@ -28,7 +29,9 @@ import { Camera } from '@ionic-native/camera';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 /* Services / Providers */
 import { DataServiceProvider } from '../providers/data-service/data-service';
+/* Page Modules */
 import { QrcodePageModule } from '../pages/qrcode/qrcode.module'
+import { HometwoPageModule } from '../pages/hometwo/hometwo.module'
 
 @NgModule({
   declarations: [
@@ -37,13 +40,13 @@ import { QrcodePageModule } from '../pages/qrcode/qrcode.module'
     ListPage,
     HabitacaoPage,
     LoginPage,
-    // QrcodePage,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     HttpClientModule,
     QrcodePageModule,
+    HometwoPageModule,
     MaterialIconsModule,
     IonicModule.forRoot(MyApp),
   ],
@@ -55,6 +58,7 @@ import { QrcodePageModule } from '../pages/qrcode/qrcode.module'
     HabitacaoPage,
     LoginPage,
     QrcodePage,
+    HometwoPage,
   ],
   providers: [
     StatusBar,
