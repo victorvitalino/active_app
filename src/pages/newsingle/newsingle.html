@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <img alt="logo" height="55" src="assets/imgs/logo-codhab.png">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content  padding>
+  <div *ngFor="let p of newsingle; let i=index">
+    <img class="thumbnail" src="http://www.codhab.df.gov.br/{{p.thumbnail.url}}"/>
+    <h1 class="single-title">
+      {{p.title}}
+    </h1>
+    <p class="content" [innerHTML]="p.content"></p>
+  </div>
+
+</ion-content>

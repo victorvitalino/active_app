@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the NewsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { DataServiceProvider } from '../../providers/data-service/data-service';
 
 @IonicPage()
 @Component({
@@ -14,12 +8,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'news.html',
 })
 export class NewsPage {
+  news: any;
+  news_sliders: any;
+  // new_id: any;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private data:DataServiceProvider) {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    // Disparo do provider para pegar as Notícias
+    this.data.getNews()
+      .subscribe((response) => {
+        this.news = response.posts;
+        this.news_sliders = response.sliders;
+        console.log(this.news);
+        console.log(this.news_sliders);
+      });
+  }  
+
+  gotoSingle(new_id){
+    this.navCtrl.push('NewsinglePage', {new_id})
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NewsPage');
-  }
-
 }

@@ -24,6 +24,10 @@ export class DataServiceProvider {
   sanar o problema de CORS quando utilizado em localhost. Proxy se encontra no arquivo ionic.config.json
   */ 
   getNews(){
-    return this.http.get("/noticias_mobile").map((response: Response) => response)
+    return this.http.get("/noticias_mobile").map((response: Response) => response[0])
+  }
+
+  getNewSingle(id){
+   return this.http.get('/postagem/' + id + ".json").map((response:Response) => response)
   }
 }

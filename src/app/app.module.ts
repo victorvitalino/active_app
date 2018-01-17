@@ -30,8 +30,9 @@ import { GoogleAnalytics } from '@ionic-native/google-analytics';
 /* Services / Providers */
 import { DataServiceProvider } from '../providers/data-service/data-service';
 /* Page Modules */
-import { QrcodePageModule } from '../pages/qrcode/qrcode.module'
-import { HometwoPageModule } from '../pages/hometwo/hometwo.module'
+import { QrcodePageModule } from '../pages/qrcode/qrcode.module';
+import { HometwoPageModule } from '../pages/hometwo/hometwo.module';
+import { NewsPageModule } from '../pages/news/news.module';
 
 @NgModule({
   declarations: [

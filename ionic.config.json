@@ -9,6 +9,10 @@
     {
       "path": "/noticias_mobile",
       "proxyUrl": "http://www.codhab.df.gov.br/noticias_mobile.json"
+    },
+    {
+      "path": "/postagem",
+      "proxyUrl": "http://www.codhab.df.gov.br/postagem/"
     }
   ]
 }

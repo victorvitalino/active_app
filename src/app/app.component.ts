@@ -25,7 +25,6 @@ export class MyApp {
   rootPage: any = HomePage;
 
   pages: any;
-  news: any;
   showLevel1 = null;
   showLevel2 = null;
   constructor(public platform: Platform,
@@ -52,12 +51,6 @@ export class MyApp {
       .subscribe((response)=> {
           this.pages = response;
           console.log(this.pages);
-      });
-
-    this.dataServiceProvider.getNews()
-      .subscribe((response) => {
-        this.news = response;
-        console.log(this.news);
       });
 
 
