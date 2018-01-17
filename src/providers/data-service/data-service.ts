@@ -18,4 +18,12 @@ export class DataServiceProvider {
     return this.http.get('assets/data/menus.json')
       .map((response: Response) => response)
   }
+
+
+  /* Aqui estou passando /api como paramentro pois foi necessário criar um proxy para
+  sanar o problema de CORS quando utilizado em localhost. Proxy se encontra no arquivo ionic.config.json
+  */ 
+  getNews(){
+    return this.http.get("/noticias_mobile").map((response: Response) => response)
+  }
 }

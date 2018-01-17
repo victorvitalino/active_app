@@ -25,6 +25,7 @@ export class MyApp {
   rootPage: any = HomePage;
 
   pages: any;
+  news: any;
   showLevel1 = null;
   showLevel2 = null;
   constructor(public platform: Platform,
@@ -38,15 +39,13 @@ export class MyApp {
     this.initializeApp();
 
     this.ga.startTrackerWithId('UA-96549234-1')
-     .then(() => {
-       console.log('Google analytics is ready now');
-          this.ga.trackView('test');
-       // Tracker is ready
-       // You can now track pages or set additional information such as AppVersion or UserId
-     })
-     .catch(e => console.log('Error starting GoogleAnalytics', e));
-
-     
+    .then(() => {
+      console.log('Google analytics is ready now');
+        this.ga.trackView('test');
+      // Tracker is ready
+      // You can now track pages or set additional information such as AppVersion or UserId
+    })
+    .catch(e => console.log('Error starting GoogleAnalytics', e));
 
     // Disparo do provider para pegar os menus
     this.dataServiceProvider.getMenus()
@@ -55,7 +54,11 @@ export class MyApp {
           console.log(this.pages);
       });
 
-
+    this.dataServiceProvider.getNews()
+      .subscribe((response) => {
+        this.news = response;
+        console.log(this.news);
+      });
 
 
       /* === BackgroundGeolocation Aqui, precisando revisar por isso está comentado.

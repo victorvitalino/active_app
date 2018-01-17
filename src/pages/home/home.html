@@ -3,53 +3,69 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-      <ion-title >
-        <img alt="logo" height="55" src="assets/imgs/logo-codhab.png" >
-      </ion-title>
+    <ion-title>
+      <img alt="logo" height="55" src="assets/imgs/logo-codhab.png">
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-grid>
-  <ion-row>
-    <ion-col>
-      <button class="button btn-nav-codhab" (click)="gotoNav('QrcodePage')">
-          <ion-icon name="ios-laptop-outline" ></ion-icon>
-        </button>
-        <span class="btn-texto">PORTAL</span>
-    </ion-col>
-    <ion-col>
-      <button class="button btn-nav-codhab" (click)="gotoNav('QrcodePage')">
-        <ion-icon name="ios-paper-outline" item-start></ion-icon>
+
+<ion-content id="home-card">
+  <ion-card>
+    <button ion-item>
+      <ion-icon name="ios-copy-outline" item-start></ion-icon>
+        <b>Notícias</b>
+        <small>Fique por dentro da CODHAB</small>
+      <ion-icon name="ios-arrow-dropright-circle-outline" item-end></ion-icon>
+    </button>
+  </ion-card>
+  <ion-card>
+    <button ion-item>
+      <ion-icon name="ios-laptop-outline" item-start></ion-icon>
+        <b>Portal</b>
+        <small>Veja o portal CODHAB</small>
+      <ion-icon name="ios-arrow-dropright-circle-outline" item-end></ion-icon>
+    </button>
+  </ion-card>
+  <ion-card>
+    <button ion-item>
+      <ion-icon name="ios-paper-outline" item-start></ion-icon>
+      <b>Requerimento</b>
+      <small>Faça requerimentos sem cadastro</small>
+      <ion-icon name="ios-arrow-dropright-circle-outline" item-end></ion-icon>
+    </button>
+    </ion-card>
+    <ion-card>
+      <button ion-item>
+      <ion-icon name="ios-brush-outline" item-start></ion-icon>
+        <b>Ações Urbanas</b>
+        <small>Venha participar você também</small>
+        <ion-icon name="ios-arrow-dropright-circle-outline" item-end></ion-icon>
       </button>
-      <span class="btn-texto">REQUERIMENTOS</span>
-    </ion-col>
-    <ion-col>
-      <button class="button btn-nav-codhab" (click)="gotoNav('QrcodePage')">
-        <ion-icon name="ios-brush-outline" item-start></ion-icon>
+    </ion-card>
+    <ion-card>
+      <button ion-item>
+        <ion-icon name="ios-chatbubbles-outline" item-start></ion-icon>
+        <b>Conversas</b>
+        <small>Fale com a CODHAB</small>
+        <ion-icon name="ios-arrow-dropright-circle-outline" item-end></ion-icon>
       </button>
-      <span class="btn-texto">AÇÕES URBANAS</span>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <button class="button btn-nav-codhab" (click)="gotoNav('QrcodePage')">
-          <ion-icon name="ios-chatbubbles-outline" item-start></ion-icon>
-        </button>
-        <span class="btn-texto">CONVERSAS</span>
-    </ion-col>
-    <ion-col>
-      <button class="button btn-nav-codhab" (click)="gotoNav('QrcodePage')">
+    </ion-card>
+    <ion-card>
+      <button ion-item>
         <ion-icon name="ios-compass-outline" item-start></ion-icon>
+        <b>Postos de Assistência</b>
+        <small>Encontre todos aqui</small>
+        <ion-icon name="ios-arrow-dropright-circle-outline" item-end></ion-icon>
       </button>
-      <span class="btn-texto">POSTOS DE ASSISTÊNCIA</span>
-    </ion-col>
-    <ion-col>
-      <button class="button btn-nav-codhab" (click)="gotoNav('QrcodePage')">
-      <ion-icon name="ios-clock-outline" item-start></ion-icon>
+    </ion-card>
+    <ion-card>
+      <button ion-item>
+        <ion-icon name="ios-clock-outline" item-start></ion-icon>
+        <b>Agendamento</b>
+        <small>Faça seu agendamento na CODHAB</small>
+        <ion-icon name="ios-arrow-dropright-circle-outline" item-end></ion-icon>
       </button>
-      <span class="btn-texto">AGENDAMENTO</span>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+  </ion-card>
 </ion-content>
+

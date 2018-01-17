@@ -4,5 +4,11 @@
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "proxies": [
+    {
+      "path": "/noticias_mobile",
+      "proxyUrl": "http://www.codhab.df.gov.br/noticias_mobile.json"
+    }
+  ]
 }
