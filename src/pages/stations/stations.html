@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <img alt="logo" height="55" src="assets/imgs/logo-codhab.png">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let item of stations; let i=index" (click)="gotoStation(item.id)">
+      {{ item.name }}
+    </button>
+  </ion-list>
+</ion-content>

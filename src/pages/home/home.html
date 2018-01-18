@@ -20,7 +20,7 @@
     </button>
   </ion-card>
   <ion-card>
-    <button ion-item>
+    <button ion-item (click)="openWithSystemBrowser('http://www.codhab.df.gov.br')">
       <ion-icon name="ios-laptop-outline" item-start></ion-icon>
         <b>Portal</b>
         <small>Veja o portal CODHAB</small>
@@ -28,7 +28,7 @@
     </button>
   </ion-card>
   <ion-card>
-    <button ion-item>
+    <button ion-item (click)="gotoNav('RequirementPage')">
       <ion-icon name="ios-paper-outline" item-start></ion-icon>
       <b>Requerimento</b>
       <small>Faça requerimentos sem cadastro</small>
@@ -36,7 +36,7 @@
     </button>
     </ion-card>
     <ion-card>
-      <button ion-item>
+      <button ion-item (click)="openWithSystemBrowser('http://www.codhab.df.gov.br/acoesurbanas')">
       <ion-icon name="ios-brush-outline" item-start></ion-icon>
         <b>Ações Urbanas</b>
         <small>Venha participar você também</small>
@@ -44,15 +44,23 @@
       </button>
     </ion-card>
     <ion-card>
-      <button ion-item>
-        <ion-icon name="ios-chatbubbles-outline" item-start></ion-icon>
-        <b>Conversas</b>
-        <small>Fale com a CODHAB</small>
+      <button ion-item (click)="openWithSystemBrowser('http://www.codhab.df.gov.br/pagina/30')">
+      <ion-icon name="ios-contacts-outline" item-start></ion-icon>
+        <b>Mobilização Social</b>
+        <small>Veja como funciona</small>
         <ion-icon name="ios-arrow-dropright-circle-outline" item-end></ion-icon>
       </button>
     </ion-card>
     <ion-card>
-      <button ion-item>
+      <button ion-item (click)="openWithSystemBrowser('http://www.codhab.df.gov.br/habitabrasilia')">
+      <ion-icon name="ios-home-outline" item-start></ion-icon>
+        <b>Habita Brasília</b>
+        <small>Conheça o programa</small>
+        <ion-icon name="ios-arrow-dropright-circle-outline" item-end></ion-icon>
+      </button>
+    </ion-card>
+    <ion-card>
+      <button ion-item (click)="gotoNav('StationsPage')">
         <ion-icon name="ios-compass-outline" item-start></ion-icon>
         <b>Postos de Assistência</b>
         <small>Encontre todos aqui</small>

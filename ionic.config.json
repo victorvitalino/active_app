@@ -13,6 +13,14 @@
     {
       "path": "/postagem",
       "proxyUrl": "http://www.codhab.df.gov.br/postagem/"
+    },
+    {
+      "path": "/stations",
+      "proxyUrl":"http://www.codhab.df.gov.br/assistencia.json"
+    },
+    {
+      "path": "/station",
+      "proxyUrl":"http://www.codhab.df.gov.br/assistencia/"
     }
   ]
 }
