@@ -23,7 +23,7 @@ import { OneSignal } from '@ionic-native/onesignal';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { LaunchNavigator } from '@ionic-native/launch-navigator';
-// import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocationResponse } from '@ionic-native/background-geolocation';
+import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocationResponse } from '@ionic-native/background-geolocation';
 import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 import { Camera } from '@ionic-native/camera';
@@ -68,7 +68,7 @@ import { NewsPageModule } from '../pages/news/news.module';
     OneSignal,
     BarcodeScanner,
     LaunchNavigator,
-    // BackgroundGeolocation,
+    BackgroundGeolocation,
     InAppBrowser,
     FileTransfer,
     FileTransferObject,
