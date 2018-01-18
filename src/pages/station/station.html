@@ -10,12 +10,8 @@
 </ion-header>
 
 <ion-content padding>
-  <!-- <div *ngFor="let item of station; let i=index" (click)="gotoStation(item.id)">
-    {{ item.name }}
-  </div> -->
-<ion-card *ngFor="let item of station; let i=index">
-  <!-- <div *ngFor="let item in station;  let i=index"> -->
 
+<ion-card *ngFor="let item of station; let i=index">
     <img src="assets/imgs/bsb.jpg">
     <ion-fab right top>
       <button ion-fab>
@@ -43,7 +39,5 @@
         Start
       </button>
     </ion-item>
-    
-  <!-- </div> -->
 </ion-card>
 </ion-content>
