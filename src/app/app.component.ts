@@ -128,10 +128,8 @@ export class MyApp {
   }
 
   gotoNav(param){
-    // console.log(param)
     //Função para navegação do sidebar
     this.nav.push(param);
-    // this.menuCtrl.close();
   }
   getDisplay(display){
     //Função para ativar e desativar menu
