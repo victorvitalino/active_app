@@ -9,8 +9,41 @@
   </ion-navbar>
 </ion-header>
 
-
-
 <ion-content padding>
+  <!-- <div *ngFor="let item of station; let i=index" (click)="gotoStation(item.id)">
+    {{ item.name }}
+  </div> -->
+<ion-card *ngFor="let item of station; let i=index">
+  <!-- <div *ngFor="let item in station;  let i=index"> -->
 
+    <img src="assets/imgs/bsb.jpg">
+    <ion-fab right top>
+      <button ion-fab>
+        <ion-icon name="pin"></ion-icon>
+      </button>
+    </ion-fab>
+    
+    <ion-item>
+      <ion-icon name="ios-locate ios-locate-outline" item-start large></ion-icon>
+      <h2>{{item.name}}</h2>
+      <p>11 N. Way St, Madison, WI 53703</p>
+    </ion-item>
+    
+    <ion-item>
+      <ion-icon name="wine" item-left large></ion-icon>
+      <h2>Institute of Fine Cocktails</h2>
+      <p>14 S. Hop Avenue, Madison, WI 53703</p>
+    </ion-item>
+    
+    <ion-item>
+      <span item-left>18 min</span>
+      <span item-left>(2.6 mi)</span>
+      <button ion-button icon-left clear item-end>
+        <ion-icon name="navigate"></ion-icon>
+        Start
+      </button>
+    </ion-item>
+    
+  <!-- </div> -->
+</ion-card>
 </ion-content>
