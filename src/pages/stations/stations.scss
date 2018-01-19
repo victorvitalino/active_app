@@ -1,3 +1,15 @@
 page-stations {
-
+    .item-md [item-end]{
+        color:#dddddd
+    }
+    small{
+        display: block;
+    }
+    .item > ion-icon, .item-inner > ion-icon {
+    font-size: 2.3rem;
+    }
+    .card-md{
+        padding-bottom: 8px;
+        padding-top: 8px;
+    }
 }

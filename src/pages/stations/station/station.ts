@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { DataServiceProvider } from '../../providers/data-service/data-service';
-import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator';
+import { DataServiceProvider } from '../../../providers/data-service/data-service';
+import { LaunchNavigator } from '@ionic-native/launch-navigator';
 
 @IonicPage()
 @Component({
@@ -21,12 +21,8 @@ station: any;
       });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad StationPage');
-  }
-
   makeCall(phonenumber){
-    var call = "tel:" + phonenumber ;
+    var call = "tel:" + phonenumber;
     document.location.href = call
   }
 
@@ -35,6 +31,6 @@ station: any;
     document.location.href = trigger;
   }
   goNavigate(lat, lon){
-     this.LauchNavigator.navigate([lat, lon])
+    this.LauchNavigator.navigate([lat, lon])
   }
 }
