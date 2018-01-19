@@ -30,7 +30,6 @@ export class DataServiceProvider {
   // getNewSingle(id){
   //   return this.http.get('http://www.codhab.df.gov.br/postagem/' + id + ".json").map((response:Response) => response)
   // }
-
   // getStations(){
   //   return this.http.get('http://www.codhab.df.gov.br/assistencia.json').map((response: Response) => response)
   // }

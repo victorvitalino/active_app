@@ -5,16 +5,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
-/* Pages */
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import { HabitacaoPage } from '../pages/habitacao/habitacao';
-import { LoginPage } from '../pages/login/login';
-import { QrcodePage } from '../pages/qrcode/qrcode';
-import { HometwoPage } from '../pages/hometwo/hometwo';
-import { HabitationPage } from '../pages/habitation/habitation';
-import { WelcomePage } from '../pages/welcome/welcome';
 
 /* Plugins */
 import { MaterialIconsModule } from 'ionic2-material-icons';
@@ -29,12 +19,16 @@ import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 import { Camera } from '@ionic-native/camera';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
+
 /* Services / Providers */
 import { DataServiceProvider } from '../providers/data-service/data-service';
+
+
 /* Page Modules */
 import { QrcodePageModule } from '../pages/qrcode/qrcode.module';
 import { HometwoPageModule } from '../pages/hometwo/hometwo.module';
 import { NewsPageModule } from '../pages/news/news.module';
+import { NavigationPageModule } from '../pages/navigation/navigation.module';
 
 @NgModule({
   declarations: [
