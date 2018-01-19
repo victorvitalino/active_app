@@ -1,33 +1,92 @@
 <ion-menu [content]="content" id="menu-material">
   <ion-content>
     <div class="menu-header">
-      <!--material-design-background-->
-      <img class="user-avatar round" style="height:90px;max-width:90px;" [src]="chosenPicture || placeholder" onerror="this.src='assets/img/avatar/profile-1.jpg'"
-      />
-      <p class="name">Maria de Jesus</p>
-      <p class="e-mail">Posição: 479º</p>
+      <img class="user-avatar round" style="height:70px;max-width:70px;" [src]="chosenPicture || placeholder" onerror="this.src='assets/img/avatar/profile-1.jpg'">
+      <h1 class="name">Frederico Maxmiliano</h1>
+      <h3 class="situation">Habilitado - documentação aprovada</h3>
+      <h3 class="position">Posição 15482º</h3>
     </div>
     <ion-list no-lines>
+
+      <!-- Publico -->
       <ion-item menuClose (click)="goToNavigationHome()">
-        <div class="item-side">
-          <ion-icon name="ios-menu-outline" class="icon-custom-side"></ion-icon>
+        <div class='item-side'>
+          <img src='assets/images/icon-home-button.png' width=20>
           <span>Início</span>
         </div>
       </ion-item>
-      <ion-item>
-        <div class="item-side">
-          <ion-icon name="" class="icon-custom-side"></ion-icon>
 
+      <ion-item menuClose (click)="goToNavigationHome()">
+        <div class='item-side'>
+          <img src='assets/images/icon-smartphone.png' width=20>
+          <span>Meu cadastro</span>
+        </div>
+      </ion-item>
+
+
+      <!-- INICIO HABITACAO -->
+      <ion-item  (click)="openHabitationNav()">
+        <div class='item-side'>
+          <img src='assets/images/icon-house.png' width=20>
           <span>Habitação</span>
         </div>
-        <ion-list>
-          <ion-item class="item-custom-side">
-            <div class="item-side custom-side-link">
-              <span>Portas abertas</span>
-            </div>
-          </ion-item>
-        </ion-list>
       </ion-item>
+
+      <ion-list *ngIf='this.habitationNav === true' class='sub-list'>
+
+        <ion-item  menuClose (click)="goToNavigationHome()">
+          <div class='item-side sub-item'>
+            <span>Morar Bem</span>
+          </div>
+        </ion-item>
+        <ion-item  menuClose (click)="goToNavigationHome()">
+          <div class='item-side sub-item'>
+            <span>Aluguel Legal</span>
+          </div>
+        </ion-item>
+        <ion-item  menuClose (click)="goToNavigationHome()">
+          <div class='item-side sub-item'>
+            <span>Portas Abertas</span>
+          </div>
+        </ion-item>
+        <ion-item  menuClose (click)="goToNavigationHome()">
+          <div class='item-side sub-item'>
+            <span>Projeto na Medida</span>
+          </div>
+        </ion-item>
+        <ion-item  menuClose (click)="goToNavigationHome()">
+          <div class='item-side sub-item'>
+            <span>Lote Legal</span>
+          </div>
+        </ion-item>
+
+      </ion-list>
+
+      <!-- FIM HABITACAO -->
+
+      <ion-item menuClose (click)="goToNavigationHome()">
+        <div class='item-side'>
+          <img src='assets/images/icon-certified.png' width=20>
+          <span>Regularização</span>
+        </div>
+      </ion-item>
+
+      <ion-item menuClose (click)="goToNavigationHome()">
+        <div class='item-side'>
+          <img src='assets/images/icon-networking.png' width=20>
+          <span>Entidades</span>
+        </div>
+      </ion-item>
+
+      <ion-item menuClose (click)="goToNavigationHome()">
+        <div class='item-side'>
+          <img src='assets/images/icon-computer.png' width=20>
+          <span>Portal</span>
+        </div>
+      </ion-item>
+
+
+      <!-- Fim Publico -->
     </ion-list>
   </ion-content>
 </ion-menu>

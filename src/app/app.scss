@@ -84,18 +84,35 @@
 
 #menu-material {
   .menu-header {
+    text-align: center;
     padding: 5px 15px;
-    background-image: url('../assets/imgs/bsb3.jpg');
+    background-image: url('../assets/images/background.png');
     background-size: cover;
     color: white;
     .name {
-      font-weight: 500;
-      margin-bottom: 3px;
+      color: black;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: -2px;
     }
-    .e-mail {
-      margin-top: 0;
-      margin-bottom: 5px;
+
+    .situation {
+      font-size: 13px;
+      color: black;
+      margin-bottom: 8px;
     }
+
+    .position {
+      margin: 0;
+      font-size: 13px;
+      color: black;
+      margin-bottom: 8px;
+    }
+    .sub-item {
+      padding-left: 35px;
+      background-color: #ffe2ad !important;
+    }
+
   }
   .user-avatar {
     max-width: 125px;height: 125px;
@@ -139,7 +156,8 @@
     font-weight: bold;
   }
   .item-side{
-    padding: 10px 0;
+    padding-left: 10px;
+    padding-bottom: 10px;
   }
   .item-side span{
     margin-left:10px!important;
