@@ -5,6 +5,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
+/* Pages */
+import { MyApp } from './app.component';
 
 /* Plugins */
 import { MaterialIconsModule } from 'ionic2-material-icons';
@@ -19,25 +21,19 @@ import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 import { Camera } from '@ionic-native/camera';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
-
 /* Services / Providers */
 import { DataServiceProvider } from '../providers/data-service/data-service';
-
 
 /* Page Modules */
 import { QrcodePageModule } from '../pages/qrcode/qrcode.module';
 import { HometwoPageModule } from '../pages/hometwo/hometwo.module';
 import { NewsPageModule } from '../pages/news/news.module';
 import { NavigationPageModule } from '../pages/navigation/navigation.module';
+import { WelcomePageModule } from '../pages/welcome/welcome.module';
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage,
-    ListPage,
-    HabitacaoPage,
-    LoginPage,
-    WelcomePage
+    MyApp
   ],
   imports: [
     BrowserModule,
@@ -47,18 +43,10 @@ import { NavigationPageModule } from '../pages/navigation/navigation.module';
     HometwoPageModule,
     MaterialIconsModule,
     IonicModule.forRoot(MyApp),
+    WelcomePageModule,
+    NavigationPageModule,
   ],
   bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HomePage,
-    ListPage,
-    HabitacaoPage,
-    LoginPage,
-    QrcodePage,
-    HometwoPage,
-    WelcomePage
-  ],
   providers: [
     StatusBar,
     SplashScreen,
