@@ -14,6 +14,7 @@ import { LoginPage } from '../pages/login/login';
 import { QrcodePage } from '../pages/qrcode/qrcode';
 import { HometwoPage } from '../pages/hometwo/hometwo';
 import { HabitationPage } from '../pages/habitation/habitation';
+import { WelcomePage } from '../pages/welcome/welcome';
 
 /* Plugins */
 import { MaterialIconsModule } from 'ionic2-material-icons';
@@ -41,6 +42,7 @@ import { NewsPageModule } from '../pages/news/news.module';
     ListPage,
     HabitacaoPage,
     LoginPage,
+    WelcomePage
   ],
   imports: [
     BrowserModule,
@@ -60,6 +62,7 @@ import { NewsPageModule } from '../pages/news/news.module';
     LoginPage,
     QrcodePage,
     HometwoPage,
+    WelcomePage
   ],
   providers: [
     StatusBar,

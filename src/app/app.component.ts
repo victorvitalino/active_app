@@ -14,6 +14,8 @@ import { LoginPage } from '../pages/login/login';
 import { QrcodePage } from '../pages/qrcode/qrcode';
 import { HometwoPage } from '../pages/hometwo/hometwo';
 import { HabitationPage } from '../pages/habitation/habitation';
+import { WelcomePage } from '../pages/welcome/welcome';
+
 import { DataServiceProvider } from '../providers/data-service/data-service';
 
 @Component({
@@ -22,12 +24,14 @@ import { DataServiceProvider } from '../providers/data-service/data-service';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = WelcomePage;
 
   pages: any;
   showLevel1 = null;
   showLevel2 = null;
+
   constructor(public platform: Platform,
+
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
     public menuCtrl: MenuController,
@@ -168,5 +172,6 @@ export class MyApp {
   isLevel2Shown(idx) {
     return this.showLevel2 === idx;
   };
+
 
 }

@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import {Platform, NavController,MenuController} from 'ionic-angular';
-import { QrcodePage } from '../../pages/qrcode/qrcode';
 import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
