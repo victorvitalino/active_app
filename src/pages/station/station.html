@@ -14,29 +14,36 @@
 <ion-card *ngFor="let item of station; let i=index">
     <img src="assets/imgs/bsb.jpg">
     <ion-fab right top>
-      <button ion-fab>
-        <ion-icon name="pin"></ion-icon>
+      <button ion-fab (click)="goNavigate(item.latitude, item.longitude)">
+        <ion-icon name="ios-navigate-outline"></ion-icon>
       </button>
     </ion-fab>
     
     <ion-item>
-      <ion-icon name="ios-locate ios-locate-outline" item-start large></ion-icon>
+      <ion-icon name="ios-locate-outline" item-start large></ion-icon>
       <h2>{{item.name}}</h2>
-      <p>11 N. Way St, Madison, WI 53703</p>
+      <p>{{item.city}}</p>
     </ion-item>
     
     <ion-item>
-      <ion-icon name="wine" item-left large></ion-icon>
-      <h2>Institute of Fine Cocktails</h2>
-      <p>14 S. Hop Avenue, Madison, WI 53703</p>
+      <ion-icon name="ios-clock-outline" item-left large></ion-icon>
+      <h2>Horário:</h2>
+      <p>{{item.schedule}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="ios-people-outline" item-left large></ion-icon>
+      <h2>Coordenador</h2>
+      <p>{{item.pessoas[0].name}}</p>
     </ion-item>
     
     <ion-item>
-      <span item-left>18 min</span>
-      <span item-left>(2.6 mi)</span>
-      <button ion-button icon-left clear item-end>
-        <ion-icon name="navigate"></ion-icon>
-        Start
+      <button ion-button icon-left clear item-left (click)="makeCall(item.pessoas[0].contact)">
+        <ion-icon name="ios-call-outline"></ion-icon>
+        Ligar
+      </button>
+      <button ion-button icon-left clear item-end (click)="writeMail(item.pessoas[0].email)">
+        <ion-icon name="ios-mail-outline"></ion-icon>
+        Email
       </button>
     </ion-item>
 </ion-card>

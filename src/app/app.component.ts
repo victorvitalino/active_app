@@ -4,7 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OneSignal } from '@ionic-native/onesignal';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
-// import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocationResponse } from '@ionic-native/background-geolocation';
+import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocationResponse } from '@ionic-native/background-geolocation';
 
 // ------------------------------------------------
 import { HomePage } from '../pages/home/home';
@@ -36,7 +36,7 @@ export class MyApp {
     public splashScreen: SplashScreen,
     public menuCtrl: MenuController,
     public oneSignal: OneSignal,
-    // public backgroundGeolocation: BackgroundGeolocation,
+    public backgroundGeolocation: BackgroundGeolocation,
     private ga: GoogleAnalytics,
     public dataServiceProvider: DataServiceProvider) {
     this.initializeApp();
@@ -57,39 +57,46 @@ export class MyApp {
           console.log(this.pages);
       });
 
-
+      
       /* === BackgroundGeolocation Aqui, precisando revisar por isso está comentado.
         Para ativa-lo descomente a variável no construtor e os imports na app.component, app.module e providers.
 
        */
-
-    // const config: BackgroundGeolocationConfig = {
-    //             desiredAccuracy: 10,
-    //             stationaryRadius: 20,
-    //             distanceFilter: 30,
-    //             debug: true, //  enable this hear sounds for background-geolocation life-cycle.
-    //             stopOnTerminate: false, // enable this to clear background location settings when the app terminates
-    //     };
-    //
-    //   this.backgroundGeolocation.configure(config)
-    //     .subscribe((location: BackgroundGeolocationResponse) => {
-    //
-    //       console.log(location);
-    //
-    //       // IMPORTANT:  You must execute the finish method here to inform the native plugin that you're finished,
-    //       // and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
-    //       // IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
-    //       this.backgroundGeolocation.finish(); // FOR IOS ONLY
-    //
-    //     });
-    // //
-    // // // start recording location
-    // this.backgroundGeolocation.start();
-    // //
-    // // // If you wish to turn OFF background-tracking, call the #stop method.
-    // // this.backgroundGeolocation.stop();
-
-
+      console.log(this.platform.is)
+    if (this.platform.is('cordova')){
+      const config: BackgroundGeolocationConfig = {
+                  desiredAccuracy: 10,
+                  stationaryRadius: 20,
+                  distanceFilter: 30,
+                  debug: true, //  enable this hear sounds for background-geolocation life-cycle.
+                  notificationTitle: 'CODHAB',
+                  notificationText: 'ativo',
+                  stopOnTerminate: false,
+                  saveBatteryOnBackground: true,
+                  startOnBoot: false,
+                  stopOnStillActivity: false,
+                  notificationIconLarge: 'icon',
+                  notificationIconSmall: 'icon' // enable this to clear background location settings when the app terminates
+          };
+      
+        this.backgroundGeolocation.configure(config)
+          .subscribe((location: BackgroundGeolocationResponse) => {
+      
+            console.log(location);
+      
+            // IMPORTANT:  You must execute the finish method here to inform the native plugin that you're finished,
+            // and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
+            // IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
+            this.backgroundGeolocation.finish(); // FOR IOS ONLY
+      
+          });
+      //
+      // // start recording location
+      this.backgroundGeolocation.start();
+      // //
+      // // // If you wish to turn OFF background-tracking, call the #stop method.
+      // // this.backgroundGeolocation.stop();
+    }
 
 
 
@@ -132,10 +139,8 @@ export class MyApp {
   }
 
   gotoNav(param){
-    // console.log(param)
     //Função para navegação do sidebar
     this.nav.push(param);
-    // this.menuCtrl.close();
   }
   getDisplay(display){
     //Função para ativar e desativar menu
