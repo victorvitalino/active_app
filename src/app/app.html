@@ -17,13 +17,24 @@
       <ion-item menuClose (click)="gotoNav('NewsPage')">
         <div class="item-side">
           <ion-icon name="ios-menu-outline" class="icon-custom-side"></ion-icon>
-          <span>Tela inicialssss</span>
+          <span>Noticias</span>
+        </div>
+      </ion-item>
+      <ion-item menuClose (click)="gotoNav('StationsPage')">
+        <div class="item-side">
+          <ion-icon name="ios-menu-outline" class="icon-custom-side"></ion-icon>
+          <span>Postos de Assistencia</span>
+        </div>
+      </ion-item>
+      <ion-item menuClose (click)="gotoNav('EntityPage')">
+        <div class="item-side">
+          <ion-icon name="ios-menu-outline" class="icon-custom-side"></ion-icon>
+          <span>Entidades</span>
         </div>
       </ion-item>
       <ion-item *ngFor="let p of pages; let i=index" text-wrap (click)="toggleLevel1('idx'+i)" [ngStyle]="{'display':getDisplay(p.display)}">
           <div class="item-side">
             <ion-icon name="{{p.icon}}" class="icon-custom-side" [ngStyle]="{'color':getColor(p.color)}"></ion-icon>
-           
             <span>{{p.category}}</span>
           </div>
         <ion-list *ngIf="isLevel1Shown('idx'+i)">

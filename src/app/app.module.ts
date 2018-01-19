@@ -25,7 +25,6 @@ import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import { DataServiceProvider } from '../providers/data-service/data-service';
 
 /* Page Modules */
-import { QrcodePageModule } from '../pages/qrcode/qrcode.module';
 import { HometwoPageModule } from '../pages/hometwo/hometwo.module';
 import { NavigationPageModule } from '../pages/navigation/navigation.module';
 import { WelcomePageModule } from '../pages/welcome/welcome.module';
@@ -38,7 +37,6 @@ import { WelcomePageModule } from '../pages/welcome/welcome.module';
     BrowserModule,
     HttpModule,
     HttpClientModule,
-    QrcodePageModule,
     HometwoPageModule,
     MaterialIconsModule,
     IonicModule.forRoot(MyApp),

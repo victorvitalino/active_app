@@ -8,12 +8,6 @@ import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocati
 
 // ------------------------------------------------
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import { HabitacaoPage } from '../pages/habitacao/habitacao';
-import { LoginPage } from '../pages/login/login';
-import { QrcodePage } from '../pages/qrcode/qrcode';
-import { HometwoPage } from '../pages/hometwo/hometwo';
-import { HabitationPage } from '../pages/habitation/habitation';
 import { WelcomePage } from '../pages/welcome/welcome';
 
 import { DataServiceProvider } from '../providers/data-service/data-service';

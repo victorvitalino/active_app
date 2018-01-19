@@ -11,9 +11,13 @@
 
 
 <ion-content>
-  <ion-card *ngFor="let item of stations; let i=index">
-    <ion-card-content button ion-item (click)="gotoStation(item.id)">
-      {{ item.name }}
-    </ion-card-content>
+  <ion-card *ngFor="let item of stations; let i=index"(click)="gotoStation(item.id)">
+    <button ion-item>
+      <ion-icon name="ios-pin-outline" item-start></ion-icon>
+      <b>{{item.name}}</b>
+      <small>{{item.city}}</small>
+      <ion-icon name="ios-arrow-dropright-circle-outline" item-end></ion-icon>
+    </button>
   </ion-card>
+  
 </ion-content>
