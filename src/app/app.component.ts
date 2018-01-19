@@ -24,6 +24,8 @@ export class MyApp {
   showLevel1 = null;
   showLevel2 = null;
 
+  habitationNav : boolean = false
+
   constructor(public platform: Platform,
 
     public statusBar: StatusBar,
@@ -129,7 +131,7 @@ export class MyApp {
   }
 
   goToNavigationHome() {
-    this.nav.push('NavigationPage')
+    this.nav.setRoot('NavigationPage')
   }
   openPage(page) {
     this.nav.setRoot(HomePage);
@@ -175,5 +177,13 @@ export class MyApp {
     return this.showLevel2 === idx;
   };
 
+  // funcoes para gestao da sidebar
 
+  openHabitationNav() {
+    if(this.habitationNav == true) {
+      this.habitationNav = false;
+    } else {
+      this.habitationNav = true;
+    }
+  }
 }

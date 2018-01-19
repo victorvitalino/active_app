@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Component} from '@angular/core';
+import { IonicPage, NavController, NavParams  } from 'ionic-angular';
+import { MyApp } from '../../app/app.component'
 /**
  * Generated class for the NavigationPage page.
  *
@@ -15,11 +15,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NavigationPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NavigationPage');
+  constructor(public navCtrl: NavController, public navParams: NavParams, public myApp: MyApp) {
   }
 
   goToSchedule() {
