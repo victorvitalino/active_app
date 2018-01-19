@@ -5,20 +5,16 @@ import { WelcomeChatPage } from './welcome_chat/welcome_chat';
 
 @NgModule({
   declarations: [
-    WelcomePage,
-    WelcomeChatPage
+    WelcomePage
   ],
   imports: [
-    IonicPageModule.forChild(WelcomePage),
-    IonicPageModule.forChild(WelcomeChatPage)
+    IonicPageModule.forChild(WelcomePage)
   ],
   exports: [
-    WelcomePage,
-    WelcomeChatPage
+    WelcomePage
   ],
   entryComponents: [
-    WelcomePage,
-    WelcomeChatPage
+    WelcomePage
   ]
 })
 export class WelcomePageModule {}

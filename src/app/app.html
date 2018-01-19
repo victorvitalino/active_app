@@ -8,22 +8,22 @@
       <p class="e-mail">Posição: 479º</p>
     </div>
     <ion-list no-lines>
-      <ion-item menuClose (click)="openPage(HomePage)">
+      <ion-item menuClose (click)="goToNavigationHome()">
         <div class="item-side">
           <ion-icon name="ios-menu-outline" class="icon-custom-side"></ion-icon>
-          <span>Tela inicial</span>
+          <span>Início</span>
         </div>
       </ion-item>
-      <ion-item *ngFor="let p of pages; let i=index" text-wrap (click)="toggleLevel1('idx'+i)" [ngStyle]="{'display':getDisplay(p.display)}">
-          <div class="item-side">
-            <ion-icon name="{{p.icon}}" class="icon-custom-side" [ngStyle]="{'color':getColor(p.color)}"></ion-icon>
-           
-            <span>{{p.category}}</span>
-          </div>
-        <ion-list *ngIf="isLevel1Shown('idx'+i)">
-          <ion-item class="item-custom-side" *ngFor="let s of p.subs; let i2=index" text-wrap menuClose (click)="gotoNav(s.component)" [ngClass]="{active: isLevel2Shown('idx'+i+'idx'+i2)}">
+      <ion-item>
+        <div class="item-side">
+          <ion-icon name="" class="icon-custom-side"></ion-icon>
+
+          <span>Habitação</span>
+        </div>
+        <ion-list>
+          <ion-item class="item-custom-side">
             <div class="item-side custom-side-link">
-              <span>{{s.subcategory}}</span>
+              <span>Portas abertas</span>
             </div>
           </ion-item>
         </ion-list>

@@ -57,7 +57,7 @@ export class MyApp {
           console.log(this.pages);
       });
 
-      
+
       /* === BackgroundGeolocation Aqui, precisando revisar por isso está comentado.
         Para ativa-lo descomente a variável no construtor e os imports na app.component, app.module e providers.
 
@@ -78,17 +78,17 @@ export class MyApp {
                   notificationIconLarge: 'icon',
                   notificationIconSmall: 'icon' // enable this to clear background location settings when the app terminates
           };
-      
+
         this.backgroundGeolocation.configure(config)
           .subscribe((location: BackgroundGeolocationResponse) => {
-      
+
             console.log(location);
-      
+
             // IMPORTANT:  You must execute the finish method here to inform the native plugin that you're finished,
             // and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
             // IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
             this.backgroundGeolocation.finish(); // FOR IOS ONLY
-      
+
           });
       //
       // // start recording location
@@ -134,6 +134,9 @@ export class MyApp {
     });
   }
 
+  goToNavigationHome() {
+    this.nav.push('NavigationPage')
+  }
   openPage(page) {
     this.nav.setRoot(HomePage);
   }

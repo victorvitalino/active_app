@@ -1,18 +1,70 @@
-<!--
-  Generated template for the NavigationPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>navigation</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <img alt="logo" height="70" src="assets/imgs/logo-codhab.png" style='margin-top: 5px !important'>
+    </ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
+  <ion-slides [pager]=true style="max-height:100%">
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-house.png" (click)="goToSchedule()"></ion-img>
+            <p class='caption-icon'>Habitação</p>
+          </ion-col>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-certified.png" (click)="goToSchedule()"></ion-img>
+            <p class='caption-icon'>Regularização</p>
+          </ion-col>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-networking.png" (click)="goToSchedule()"></ion-img>
+            <p class='caption-icon'>Entidades</p>
+          </ion-col>
 
+        </ion-row>
+        <ion-row>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-computer.png" (click)="goToSchedule()"></ion-img>
+            <p class='caption-icon'>Portal</p>
+          </ion-col>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-smartphone.png" (click)="goToSchedule()"></ion-img>
+            <p class='caption-icon'>Meu cadastro</p>
+          </ion-col>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-loupe.png" (click)="goToSchedule()"></ion-img>
+            <p class='caption-icon'>Pesquisa CPF/CNPJ</p>
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-sketch.png" (click)="goToSchedule()"></ion-img>
+            <p class='caption-icon'>Assistência Técnica</p>
+          </ion-col>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-qr-code.png" (click)="goToSchedule()"></ion-img>
+            <p class='caption-icon'>Leitor QR</p>
+          </ion-col>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-signing.png" (click)="goToSchedule()"></ion-img>
+            <p class='caption-icon'>Requerimento</p>
+          </ion-col>
+
+        </ion-row>
+
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 2</h1>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

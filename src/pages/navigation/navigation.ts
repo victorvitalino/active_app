@@ -22,4 +22,7 @@ export class NavigationPage {
     console.log('ionViewDidLoad NavigationPage');
   }
 
+  goToSchedule() {
+    this.navCtrl.push('WelcomePage')
+  }
 }

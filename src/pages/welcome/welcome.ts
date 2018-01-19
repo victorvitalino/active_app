@@ -18,6 +18,6 @@ export class WelcomePage {
   }
 
   goToHome() {
-    this.navCtrl.push('HomePage');
+    this.navCtrl.push('NavigationPage');
   }
 }
