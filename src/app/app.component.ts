@@ -136,7 +136,6 @@ export class MyApp {
   }
 
   gotoNav(param){
-    //Função para navegação do sidebar
     this.nav.push(param);
   }
   getDisplay(display){

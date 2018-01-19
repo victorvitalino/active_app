@@ -25,4 +25,7 @@ export class NavigationPage {
   goToSchedule() {
     this.navCtrl.push('WelcomePage')
   }
+  goToNav(param) {
+    this.navCtrl.push(param);
+  }
 }

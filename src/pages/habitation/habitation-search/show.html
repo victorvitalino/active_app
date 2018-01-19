@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <img alt="logo" height="55" src="assets/imgs/logo-codhab.png">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="value" (keyup.enter)="searchCandidate('01801850127')"></ion-searchbar>
+
+  <ion-item-group *ngIf="candidate !== undefined">
+    <ion-item-divider color="light">
+      <b>DADOS PESSOAIS</b>
+    </ion-item-divider>
+    <ion-item>
+      <b>Nome: </b>{{candidate.basic_information.name}}</ion-item>
+    <ion-item>
+      <strong>Estado Civil: </strong>{{candidate.basic_information.civil_state}}
+      <br/>
+    </ion-item>
+    <ion-item>
+      <strong>Chegada no DF: </strong>{{candidate.basic_information.arrival_df }}
+      <br/>
+    </ion-item>
+    <ion-item>
+      <strong>Nascido em: </strong>{{candidate.basic_information.born}}
+      <br/>
+    </ion-item>
+    <ion-item>
+      <strong>Idoso: </strong>
+      <span class="badge badge-positive badge_search">Não</span>
+      <br/>
+    </ion-item>
+    <ion-item>
+      <strong>Condição Especial: </strong>
+      <span class="badge badge-positive badge_search">{{candidate.basic_information.special_condition}}</span>
+      <br/>
+    </ion-item>
+    <ion-item>
+      <strong>CID: </strong>{{candidate.basic_information.cid}}
+      <br/>
+    </ion-item>
+    <ion-item>
+      <strong>NIS: </strong>{{candidate.basic_information.nis}}
+      <br/>
+    </ion-item>
+
+    <ion-item-divider color="light">
+      <b>Indicado ao empreendimento</b>
+    </ion-item-divider>
+    <ion-item  *ngIf="!!!candidate.enterprise_cadastre.length">
+      Sem Indicação à Empreendimento
+    </ion-item>
+    <ion-item *ngFor="let i of candidate.enterprise_cadastre">
+      <strong>Empreendimento: </strong>{{i.enterprise_name}}
+      <br />
+      <div *ngIf="i.inactive === false || i.inactive === 'empty'">
+        <div>
+          <strong>Situação: </strong>Indicação Ativa</div>
+      </div>
+      <div *ngIf="i.inactive === true">
+        <div>
+          <strong>Situação: </strong>Indicação Inativa</div>
+        <br/>
+      </div>
+    </ion-item>
+    <ion-item-divider color="light">
+      <b>Situação do Candidato</b>
+    </ion-item-divider>
+    <ion-item *ngFor="let i of candidate.lists">
+      <strong>Lista: </strong>{{i.name}}
+      <br/>
+      <div *ngIf="i.position != null">
+        <strong>Posição: </strong>{{i.position}}
+        <br/>
+      </div>
+      <strong>Pontuação: </strong>{{candidate.pontuations[0].total}}
+      <br/>
+      <strong>Faixa de renda: </strong>Faixa {{i.zone}}
+      <br/>
+      <ion-item color="primary" >
+        <strong>{{candidate.basic_information.situation}}</strong>
+      </ion-item>
+            <!-- <ion-item color="{{candidate.situations[0].name == 'HABILITADO' ? 'light' : 'secondary'}}" color="primary">
+              <strong>{{candidate.basic_information.situation}}</strong>
+            </ion-item> -->
+      <br/>
+    </ion-item>
+  </ion-item-group>
+</ion-content>

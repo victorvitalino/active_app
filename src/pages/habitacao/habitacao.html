@@ -4,12 +4,27 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title><img alt="logo" height="55" src="assets/imgs/logo-codhab.png" ></ion-title>
+    <ion-title>
+      <img alt="logo" height="55" src="assets/imgs/logo-codhab.png">
+    </ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <button ion-button (click)="scan()">Scan </button>
+  <ion-item>
+    <p>{{imageURI}}</p>
+    <button ion-button color="secondary" (click)="getImage()">Get Image</button>
+  </ion-item>
+  <ion-item>
+    <h4>Preview</h4>
+    <img src="{{imageURI}}" *ngIf="imageURI" alt="Ionic File" width="300" />
+  </ion-item>
+  <ion-item>
+    <button ion-button (click)="uploadFile()">Upload</button>
+  </ion-item>
+  <ion-item>
+    <button ion-button (click)="gotoNav('Habitation')">Upload</button>
+  </ion-item>
 </ion-content>

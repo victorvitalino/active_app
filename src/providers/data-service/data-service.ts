@@ -2,6 +2,7 @@ import { HttpModule } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Http, Response } from "@angular/http";
+import { NavController, NavParams } from 'ionic-angular';
 import 'rxjs/add/operator/map';
 
 
