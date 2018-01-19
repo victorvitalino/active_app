@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { DataServiceProvider } from '../../providers/data-service/data-service';
+import { DataServiceProvider } from '../../../providers/data-service/data-service';
 
 @IonicPage()
 @Component({
   selector: 'page-newsingle',
-  templateUrl: 'newsingle.html',
+  templateUrl: './show.html',
 })
 export class NewsinglePage {
   newsingle: any;
@@ -20,10 +20,5 @@ export class NewsinglePage {
   
     });
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NewsinglePage');
-  }
-
 
 }

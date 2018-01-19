@@ -5,7 +5,7 @@ import { DataServiceProvider } from '../../providers/data-service/data-service';
 @IonicPage()
 @Component({
   selector: 'page-news',
-  templateUrl: 'news.html',
+  templateUrl: './show.html',
 })
 export class NewsPage {
   news: any;

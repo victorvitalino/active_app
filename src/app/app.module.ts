@@ -27,7 +27,6 @@ import { DataServiceProvider } from '../providers/data-service/data-service';
 /* Page Modules */
 import { QrcodePageModule } from '../pages/qrcode/qrcode.module';
 import { HometwoPageModule } from '../pages/hometwo/hometwo.module';
-import { NewsPageModule } from '../pages/news/news.module';
 import { NavigationPageModule } from '../pages/navigation/navigation.module';
 import { WelcomePageModule } from '../pages/welcome/welcome.module';
 

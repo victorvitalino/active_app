@@ -14,6 +14,12 @@
           <span>Tela inicial</span>
         </div>
       </ion-item>
+      <ion-item menuClose (click)="gotoNav('NewsPage')">
+        <div class="item-side">
+          <ion-icon name="ios-menu-outline" class="icon-custom-side"></ion-icon>
+          <span>Tela inicialssss</span>
+        </div>
+      </ion-item>
       <ion-item *ngFor="let p of pages; let i=index" text-wrap (click)="toggleLevel1('idx'+i)" [ngStyle]="{'display':getDisplay(p.display)}">
           <div class="item-side">
             <ion-icon name="{{p.icon}}" class="icon-custom-side" [ngStyle]="{'color':getColor(p.color)}"></ion-icon>
