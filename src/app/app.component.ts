@@ -160,4 +160,10 @@ export class MyApp {
 
     this[exemption_nav] = value
   }
+
+  // Navegações
+
+  goToQrCode() {
+    this.nav.push('QrcodePage')
+  }
 }

@@ -211,7 +211,7 @@
 
       <ion-list *ngIf='this.serviceNav === true' class='sub-list'>
 
-        <ion-item (click)="goToNavigationHome()">
+        <ion-item (click)="goToQrCode()" menuClose>
           <span>Leitor QR</span>
         </ion-item>
 
@@ -223,6 +223,9 @@
           <span>Requerimento</span>
         </ion-item>
 
+        <ion-item  menuClose (click)="goToNavigationHome()">
+          <span>Agendamento</span>
+        </ion-item>
       </ion-list>
       <!-- Fim Publico -->
     </ion-list>
