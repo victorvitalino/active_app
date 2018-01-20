@@ -89,6 +89,7 @@
     background-image: url('../assets/images/background.png');
     background-size: cover;
     color: white;
+
     .name {
       color: black;
       font-size: 20px;
@@ -108,12 +109,21 @@
       color: black;
       margin-bottom: 8px;
     }
-    .sub-item {
-      padding-left: 35px;
-      background-color: #ffe2ad !important;
-    }
 
   }
+
+  .sub-list {
+    padding-left: 14% !important;
+  }
+
+  .sub-list, .sub-list .item-md {
+    background-color: #ffeaa0 !important;
+  }
+
+  .sub-list-item {
+    background-color: #fddb65 !important;
+  }
+
   .user-avatar {
     max-width: 125px;height: 125px;
     padding: .5em;
@@ -126,7 +136,7 @@
     min-height: 20px!important;
   }
   .item-md{
-   padding-left: 0;
+    padding-left: 0;
   }
   .label-md {
     margin: 5px 0px;
@@ -144,27 +154,28 @@
   .list-md{
     margin:0;
   }
-  .list .list-md{
-    background-color: #eeeeee;
-  }
   .icon-custom-side{
-  font-size: 25px!important;
+    font-size: 25px!important;
   }
-  .item-custom-side{
+
+  .item-custom-side {
     background-color: #eeeeee;
     color:#3a3a3a;
     font-weight: bold;
   }
-  .item-side{
+
+  .item-side {
     padding-left: 10px;
     padding-bottom: 10px;
   }
-  .item-side span{
+
+  .item-side span {
     margin-left:10px!important;
     font-size: 15px!important;
     color:#3a3a3a;
     font-weight: bold;
   }
+
 }
 
 

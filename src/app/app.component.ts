@@ -25,6 +25,10 @@ export class MyApp {
   showLevel2 = null;
 
   habitationNav : boolean = false
+  regularizationNav : boolean = false
+  entityNav : boolean = false
+  portalNav : boolean = false
+  cadastreNav : boolean = false
 
   constructor(public platform: Platform,
 
@@ -133,57 +137,56 @@ export class MyApp {
   goToNavigationHome() {
     this.nav.setRoot('NavigationPage')
   }
-  openPage(page) {
-    this.nav.setRoot(HomePage);
-  }
-
-  gotoNav(param){
-    //Função para navegação do sidebar
-    this.nav.push(param);
-  }
-  getDisplay(display){
-    //Função para ativar e desativar menu
-    return display
-  }
-  getColor(color){
-    //Função para mudar cor do menu
-    return color
-  }
-
-// Conjunto de funções do Toggle do Sidebar
-  toggleLevel1(idx) {
-    if (this.isLevel1Shown(idx)) {
-      this.showLevel1 = null;
-    } else {
-      this.showLevel1 = idx;
-    }
-  };
-
-  isLevel1Shown(idx) {
-    return this.showLevel1 === idx;
-  };
-
-  toggleLevel2(idx) {
-    if (this.isLevel2Shown(idx)) {
-      this.showLevel1 = null;
-      this.showLevel2 = null;
-    } else {
-      this.showLevel1 = idx;
-      this.showLevel2 = idx;
-    }
-  };
-
-  isLevel2Shown(idx) {
-    return this.showLevel2 === idx;
-  };
 
   // funcoes para gestao da sidebar
 
-  openHabitationNav() {
-    if(this.habitationNav == true) {
-      this.habitationNav = false;
-    } else {
-      this.habitationNav = true;
-    }
+  openHabitationNav(reset = false) {
+    this.resetNav('habitationNav', this.habitationNav);
+    this.habitationNav = (reset == true) ? false : this.habitationNav
+    this.habitationNav = (this.habitationNav == true) ? false : true
+  }
+
+  openRegularizationNav(reset = false) {
+    this.resetNav('regularizationNav', this.regularizationNav);
+    this.regularizationNav = (reset == true) ? false : this.regularizationNav
+    this.regularizationNav = (this.regularizationNav == true) ? false : true
+  }
+
+  openEntityNav(reset = false) {
+    this.resetNav('entityNav', this.entityNav);
+    this.entityNav = (reset == true) ? false : this.entityNav
+    this.entityNav = (this.entityNav == true) ? false : true
+  }
+
+  openPortalNav(reset = false) {
+    this.resetNav('portalNav', this.portalNav);
+    this.portalNav = (reset == true) ? false : this.portalNav
+    this.portalNav = (this.portalNav == true) ? false : true
+  }
+
+  openCadastreNav(reset = false) {
+    this.resetNav('cadastreNav', this.cadastreNav);
+    this.cadastreNav = (reset == true) ? false : this.cadastreNav
+    this.cadastreNav = (this.cadastreNav == true) ? false : true
+
+  }
+
+  openServiceNav(reset = false) {
+    this.resetNav('serviceNav', this.serviceNav);
+    this.serviceNav = (reset == true) ? false : this.serviceNav
+    this.serviceNav = (this.serviceNav == true) ? false : true
+
+  }
+
+  resetNav(exemption_nav, value) {
+    this.habitationNav = false
+    this.regularizationNav = false
+    this.habitationNav = false
+    this.regularizationNav  = false
+    this.entityNav = false
+    this.portalNav = false
+    this.cadastreNav = false
+
+    this[exemption_nav] = value
   }
 }
