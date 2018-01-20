@@ -77,8 +77,6 @@ export class MyApp {
       // // this.backgroundGeolocation.stop();
     }
 
-
-
     platform.ready().then(() => {
 
       // ebef79f2-9b94-4c8b-ad48-d7e4b304b2cc  chave teste onesingal
@@ -97,7 +95,6 @@ export class MyApp {
 
       this.oneSignal.endInit();
     });
-
 
   }
 
