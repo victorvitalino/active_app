@@ -26,6 +26,10 @@ export class MyApp {
   cadastreNav       : boolean = false;
   serviceNav        : boolean = false;
 
+
+  typewriter_text   : string;
+  typewriter_display: string = "";
+
   constructor(public platform: Platform,
               public statusBar: StatusBar,
               public splashScreen: SplashScreen,
@@ -159,6 +163,18 @@ export class MyApp {
 
     this[exemption_nav] = value
   }
+  
+  typingCallback(that) {
+    let total_length = that.typewriter_text.length;
+    let current_length = that.typewriter_display.length;
+    if (current_length < total_length) {
+      that.typewriter_display += that.typewriter_text[current_length];
+      setTimeout(that.typingCallback, 40, that);
+    } else {
+      that.enable_next_button = true;
+    }
+  }
+
 
   // Navegações
 

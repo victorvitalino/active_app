@@ -3,4 +3,17 @@ page-welcome {
   .content {
     text-align: 'text-center' !important;
   }
+  .item-md.item-input.item-input-has-focus .item-inner,
+  .item-md.item-input.input-has-focus .item-inner {
+    border-bottom-color: #000;
+    -webkit-box-shadow: inset 0 -1px 0 0 #000;
+    box-shadow: inset 0 -1px 0 0 #000;
+  }
+  input{
+    text-align: center!important;
+  }
+
+
+
+
 }

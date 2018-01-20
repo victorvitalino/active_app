@@ -12,17 +12,24 @@
     Bem-vindo à CODHAB!
   </p>
   <p class='text-center text-content'>
-    Este aplicativo é uma ferramenta poderosa que possibilita aos cidadãos o acompanhamento dos programas habitacionais e a realização de atendimentos virtuais sem sair de casa, oferencendo total transparência perante à população, Ministério público, TCDF e demais órgãos de controle.
+    Este aplicativo é uma ferramenta poderosa que possibilita aos cidadãos o 
+    acompanhamento dos programas habitacionais e a realização de atendimentos virtuais sem sair de casa,
+    oferencendo total transparência perante à população, Ministério público, TCDF e demais órgãos de controle.
   </p>
 
   <div class='text-center'>
     <ion-item>
-        <ion-label color="primary" floating>CPF ou CNPJ</ion-label>
-        <ion-input  [(ngModel)]="cpf_cnpj" (change)="cpf_cnpj = format(cpf_cnpj)" name="cpf_cnpj" type='number' class='input-border' style='text-align:center'></ion-input>
+      <ion-input [(ngModel)]="cpf_cnpj" (keyup)="cpf_cnpj = format(cpf_cnpj)" name="cpf_cnpj" placeholder="Insira aqui seu CPF ou CNPJ"></ion-input>
     </ion-item>
     <br />
     <br />
-    <button ion-button color="primary" (click)="startChat()">ME CONECTAR</button>
+    <ng-container *ngIf="cpf_cnpj.length >= 14; else elseTemplate">
+        <button ion-button color="primary" (click)="startChat(cpf_cnpj)" >ME CONECTAR</button>
+    </ng-container>
+    <ng-template #elseTemplate>
+        <button ion-button color="primary" (click)="startChat(cpf_cnpj)" disabled>ME CONECTAR</button>
+    </ng-template>
+
     <br />
     <br />
     <a (click)="goToHome()">PULAR ETAPA</a>
