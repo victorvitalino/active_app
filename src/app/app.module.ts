@@ -21,14 +21,13 @@ import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 import { Camera } from '@ionic-native/camera';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
-/* Services / Providers */
-import { DataServiceProvider } from '../providers/data-service/data-service';
 
 /* Page Modules */
 import { NavigationPageModule } from '../pages/navigation/navigation.module';
 import { WelcomePageModule } from '../pages/welcome/welcome.module';
 
 /* Providers */
+import { DataServiceProvider } from '../providers/data-service/data-service';
 import { HabitationProvider } from '../providers/habitation/habitation';
 
 @NgModule({

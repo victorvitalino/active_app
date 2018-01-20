@@ -9,6 +9,7 @@ import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocati
 import { WelcomePage } from '../pages/welcome/welcome';
 
 import { DataServiceProvider } from '../providers/data-service/data-service';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 @Component({
   templateUrl: 'app.html'
@@ -32,6 +33,7 @@ export class MyApp {
               public oneSignal: OneSignal,
               public backgroundGeolocation: BackgroundGeolocation,
               private ga: GoogleAnalytics,
+              public iab:InAppBrowser,
               public dataServiceProvider: DataServiceProvider) {
 
     this.initializeApp();
@@ -50,7 +52,7 @@ export class MyApp {
                   notificationText: 'ativo',
                   stopOnTerminate: false,
                   saveBatteryOnBackground: true,
-                  startOnBoot: false,
+                  startOnBoot: true,
                   stopOnStillActivity: false,
                   notificationIconLarge: 'icon',
                   notificationIconSmall: 'icon' // enable this to clear background location settings when the app terminates
@@ -165,5 +167,33 @@ export class MyApp {
 
   goToQrCode() {
     this.nav.push('QrcodePage')
+  }
+
+  goToMorarBem(){
+    // this.iab.create()
+  }
+  goToSobreCodhab(){
+    this.iab.create('http://www.codhab.df.gov.br/pagina/3', '_system')
+  }
+  goToNews(){
+    this.nav.push('NewsPage')
+  }
+  goToHabita(){
+    this.iab.create('http://www.codhab.df.gov.br/habitabrasilia', '_system')
+  }
+  goToConcursos(){
+    this.iab.create('http://www.codhab.df.gov.br/concursos', '_system')
+  }
+  goToAcoesUrbanas(){
+    this.iab.create('http://www.codhab.df.gov.br/acoesurbanas', '_system')
+  }
+  goToMobilizacao(){
+    this.iab.create('http://www.codhab.df.gov.br/mobilizacao_social', '_system')
+  }
+  goToAcessoInformacao(){
+    this.iab.create('http://www.codhab.df.gov.br/acessoainformacao', '_system')
+  }
+  goToOuvidoria(){
+    this.iab.create('http://www.ouv.df.gov.br/', '_system')
   }
 }
