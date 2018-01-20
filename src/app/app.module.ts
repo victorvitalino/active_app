@@ -25,7 +25,6 @@ import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import { DataServiceProvider } from '../providers/data-service/data-service';
 
 /* Page Modules */
-import { HometwoPageModule } from '../pages/hometwo/hometwo.module';
 import { NavigationPageModule } from '../pages/navigation/navigation.module';
 import { WelcomePageModule } from '../pages/welcome/welcome.module';
 import { HabitationProvider } from '../providers/habitation/habitation';
@@ -38,7 +37,6 @@ import { HabitationProvider } from '../providers/habitation/habitation';
     BrowserModule,
     HttpModule,
     HttpClientModule,
-    HometwoPageModule,
     MaterialIconsModule,
     IonicModule.forRoot(MyApp),
     WelcomePageModule,
