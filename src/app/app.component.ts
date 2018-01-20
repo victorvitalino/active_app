@@ -29,6 +29,7 @@ export class MyApp {
   entityNav : boolean = false
   portalNav : boolean = false
   cadastreNav : boolean = false
+  serviceNav : boolean = false
 
   constructor(public platform: Platform,
 
