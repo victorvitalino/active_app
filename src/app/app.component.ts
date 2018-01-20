@@ -6,8 +6,6 @@ import { OneSignal } from '@ionic-native/onesignal';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocationResponse } from '@ionic-native/background-geolocation';
 
-// ------------------------------------------------
-import { HomePage } from '../pages/home/home';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { QrCodePage } from '../pages/qrcode/qrcode';
 
