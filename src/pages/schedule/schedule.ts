@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the HometwoPage page.
+ * Generated class for the SchedulePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-hometwo',
-  templateUrl: 'hometwo.html',
+  selector: 'page-schedule',
+  templateUrl: 'schedule.html',
 })
-export class HometwoPage {
+export class SchedulePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HometwoPage');
+    console.log('ionViewDidLoad SchedulePage');
   }
 
 }

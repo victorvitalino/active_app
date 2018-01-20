@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import { IonicPage, NavController, NavParams  } from 'ionic-angular';
 import { MyApp } from '../../app/app.component'
+import { QrcodePage } from '../qrcode/qrcode'
 /**
  * Generated class for the NavigationPage page.
  *
@@ -12,11 +13,12 @@ import { MyApp } from '../../app/app.component'
 @Component({
   selector: 'page-navigation',
   templateUrl: 'navigation.html',
+  providers: [QrcodePage]
 })
 export class NavigationPage {
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public myApp: MyApp) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public myApp: MyApp, public qrCode: QrcodePage ) {
   }
 
   goToSchedule() {

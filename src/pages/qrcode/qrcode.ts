@@ -19,25 +19,19 @@ export class QrcodePage {
   encodeData : string ;
   encodedData : {} ;
   options :BarcodeScannerOptions;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public barcodeScanner: BarcodeScanner, public iab: InAppBrowser) {
-  }
 
-  scan(){
-    this.options = {
-        prompt : "Scan your barcode "
-    }
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              public barcodeScanner: BarcodeScanner,
+              public appBrowser: InAppBrowser) { }
+
+  scanner() {
+    this.options = { prompt : "Faça a leitura do código QR"}
+
     this.barcodeScanner.scan(this.options).then((barcodeData) => {
-
-        console.log(barcodeData);
-        this.scanData = barcodeData;
-        this.iab.create(barcodeData.text,'_self');
-    }, (err) => {
-        console.log("Error occured : " + err);
-    });
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad QrcodePage');
+      this.scanData = barcodeData;
+      this.appBrowser.create(barcodeData.text, '_self');
+    }, (err) => { console.log("Error:" + err )});
   }
 
 }

@@ -9,6 +9,7 @@ import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocati
 // ------------------------------------------------
 import { HomePage } from '../pages/home/home';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { QrCodePage } from '../pages/qrcode/qrcode';
 
 import { DataServiceProvider } from '../providers/data-service/data-service';
 
@@ -20,50 +21,28 @@ export class MyApp {
 
   rootPage: any = WelcomePage;
 
-  pages: any;
-  showLevel1 = null;
-  showLevel2 = null;
-
-  habitationNav : boolean = false
-  regularizationNav : boolean = false
-  entityNav : boolean = false
-  portalNav : boolean = false
-  cadastreNav : boolean = false
-  serviceNav : boolean = false
+  habitationNav     : boolean = false;
+  regularizationNav : boolean = false;
+  entityNav         : boolean = false;
+  portalNav         : boolean = false;
+  cadastreNav       : boolean = false;
+  serviceNav        : boolean = false;
 
   constructor(public platform: Platform,
+              public statusBar: StatusBar,
+              public splashScreen: SplashScreen,
+              public menuCtrl: MenuController,
+              public oneSignal: OneSignal,
+              public backgroundGeolocation: BackgroundGeolocation,
+              private ga: GoogleAnalytics,
+              public dataServiceProvider: DataServiceProvider) {
 
-    public statusBar: StatusBar,
-    public splashScreen: SplashScreen,
-    public menuCtrl: MenuController,
-    public oneSignal: OneSignal,
-    public backgroundGeolocation: BackgroundGeolocation,
-    private ga: GoogleAnalytics,
-    public dataServiceProvider: DataServiceProvider) {
     this.initializeApp();
 
-    this.ga.startTrackerWithId('UA-96549234-1')
-    .then(() => {
-      console.log('Google analytics is ready now');
-        this.ga.trackView('test');
-      // Tracker is ready
-      // You can now track pages or set additional information such as AppVersion or UserId
-    })
-    .catch(e => console.log('Error starting GoogleAnalytics', e));
+    this.ga.startTrackerWithId('UA-96549234-1').then(() => {
+      this.ga.trackView('test');
+    }).catch(e => console.log('Error starting GoogleAnalytics', e));
 
-    // Disparo do provider para pegar os menus
-    this.dataServiceProvider.getMenus()
-      .subscribe((response)=> {
-          this.pages = response;
-          console.log(this.pages);
-      });
-
-
-      /* === BackgroundGeolocation Aqui, precisando revisar por isso está comentado.
-        Para ativa-lo descomente a variável no construtor e os imports na app.component, app.module e providers.
-
-       */
-      console.log(this.platform.is)
     if (this.platform.is('cordova')){
       const config: BackgroundGeolocationConfig = {
                   desiredAccuracy: 10,
@@ -126,12 +105,8 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-
-
     });
   }
 
@@ -139,7 +114,7 @@ export class MyApp {
     this.nav.setRoot('NavigationPage')
   }
 
-  // funcoes para gestao da sidebar
+  // Controles Sidebar
 
   openHabitationNav(reset = false) {
     this.resetNav('habitationNav', this.habitationNav);
@@ -169,14 +144,12 @@ export class MyApp {
     this.resetNav('cadastreNav', this.cadastreNav);
     this.cadastreNav = (reset == true) ? false : this.cadastreNav
     this.cadastreNav = (this.cadastreNav == true) ? false : true
-
   }
 
   openServiceNav(reset = false) {
     this.resetNav('serviceNav', this.serviceNav);
     this.serviceNav = (reset == true) ? false : this.serviceNav
     this.serviceNav = (this.serviceNav == true) ? false : true
-
   }
 
   resetNav(exemption_nav, value) {
