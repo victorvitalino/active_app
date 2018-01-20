@@ -83,6 +83,7 @@
 }
 
 #menu-material {
+
   .menu-header {
     text-align: center;
     padding: 5px 15px;
@@ -112,6 +113,8 @@
 
   }
 
+
+
   .sub-list {
     padding-left: 14% !important;
   }
@@ -136,7 +139,7 @@
     min-height: 20px!important;
   }
   .item-md{
-    padding-left: 0;
+    padding-left: 0 !important;
   }
   .label-md {
     margin: 5px 0px;
@@ -206,6 +209,10 @@
   color: #696A75 !important;
 }
 
+.mini-link {
+  color: #000000;
+  font-weight: bold;
+}
 
 // OVERRIDE
 
@@ -213,12 +220,22 @@ ion-img {
   background-color: transparent !important;
 }
 
-toolbar-background-md {
-  border-color: #b2b2b2;
-  background: #f8f8f8 !important;
-}
-
-
 .swiper-pagination-bullet-active {
   background: #ffcb08;
+}
+
+.item-md{
+  padding-left: 0 !important;
+}
+
+.toolbar-background-md {
+    border-color: #b2b2b2;
+    background: #e0e1e2;
+}
+
+.button-md-primary {
+    color: #fff;
+    background-color: #fcc90a;
+    color: black;
+    font-weight: 600;
 }
