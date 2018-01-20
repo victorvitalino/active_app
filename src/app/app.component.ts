@@ -7,7 +7,6 @@ import { GoogleAnalytics } from '@ionic-native/google-analytics';
 import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocationResponse } from '@ionic-native/background-geolocation';
 
 import { WelcomePage } from '../pages/welcome/welcome';
-import { QrCodePage } from '../pages/qrcode/qrcode';
 
 import { DataServiceProvider } from '../providers/data-service/data-service';
 

@@ -27,6 +27,8 @@ import { DataServiceProvider } from '../providers/data-service/data-service';
 /* Page Modules */
 import { NavigationPageModule } from '../pages/navigation/navigation.module';
 import { WelcomePageModule } from '../pages/welcome/welcome.module';
+
+/* Providers */
 import { HabitationProvider } from '../providers/habitation/habitation';
 
 @NgModule({
