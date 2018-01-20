@@ -103,7 +103,7 @@
       </ion-item>
       <ion-list *ngIf='this.regularizationNav === true' class='sub-list'>
 
-        <ion-item  menuClose (click)="goToNavigationHome()">
+        <ion-item  menuClose (click)="goToRegConheca()">
           <span>Conheça o programa</span>
         </ion-item>
 
@@ -111,15 +111,15 @@
           <span>Agendamentos</span>
         </ion-item>
 
-        <ion-item  menuClose (click)="goToNavigationHome()">
+        <ion-item  menuClose (click)="goToRegDoc()">
           <span>Documentações</span>
         </ion-item>
 
-        <ion-item  menuClose (click)="goToNavigationHome()">
+        <ion-item  menuClose (click)="goToRegReq()">
           <span>Requerimentos</span>
         </ion-item>
 
-        <ion-item  menuClose (click)="goToNavigationHome()">
+        <ion-item  menuClose (click)="goToRegTel()">
           <span>Contatos telefônicos</span>
         </ion-item>
 
@@ -225,6 +225,9 @@
 
         <ion-item  menuClose (click)="goToNavigationHome()">
           <span>Agendamento</span>
+        </ion-item>
+        <ion-item  menuClose (click)="goToStations()">
+          <span>Postos de Assistencia Técnica</span>
         </ion-item>
       </ion-list>
       <!-- Fim Publico -->

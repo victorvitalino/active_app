@@ -13,6 +13,16 @@
 <ion-content>
   <ion-searchbar [(ngModel)]="value" (keyup.enter)="searchCandidate(value)"></ion-searchbar>
 
+
+  <form #loginForm="ngForm">
+    <ion-item>
+      <ion-label floating>CPF/CNPJ</ion-label>
+      <ion-input [(ngModel)]="cpf_cnpj" (blur)="cpf_cnpj = format(cpf_cnpj)" name="cpf_cnpj"></ion-input>
+    </ion-item>
+    <button ion-button full type="submit" color="sicor" (tap)="login(signForm.value)">Login</button>
+  </form>
+
+  
   <ion-item-group *ngIf="candidate !== undefined">
     <ion-item-divider color="light">
       <b>DADOS PESSOAIS</b>

@@ -23,9 +23,10 @@ export class QrcodePage {
   scanner() {
     this.options = { prompt : "Faça a leitura do código QR"}
     this.barcodeScanner.scan(this.options).then((barcodeData) => {
-      this.scanData = barcodeData;
-      this.appBrowser.create(barcodeData.text, '_self');
+    this.scanData = barcodeData;
+    this.appBrowser.create(barcodeData.text, '_system');
     }, (err) => { console.log("Error:" + err )});
   }
 
+  
 }

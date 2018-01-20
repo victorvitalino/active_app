@@ -170,27 +170,42 @@ export class MyApp {
     // this.iab.create()
   }
   goToSobreCodhab(){
-    this.iab.create('http://www.codhab.df.gov.br/pagina/3', '_system')
+    this.iab.create('http://www.codhab.df.gov.br/pagina/3', '_self')
   }
   goToNews(){
     this.nav.push('NewsPage')
   }
   goToHabita(){
-    this.iab.create('http://www.codhab.df.gov.br/habitabrasilia', '_system')
+    this.iab.create('http://www.codhab.df.gov.br/habitabrasilia', '_self')
   }
   goToConcursos(){
-    this.iab.create('http://www.codhab.df.gov.br/concursos', '_system')
+    this.iab.create('http://www.codhab.df.gov.br/concursos', '_self')
   }
   goToAcoesUrbanas(){
-    this.iab.create('http://www.codhab.df.gov.br/acoesurbanas', '_system')
+    this.iab.create('http://www.codhab.df.gov.br/acoesurbanas', '_self')
   }
   goToMobilizacao(){
-    this.iab.create('http://www.codhab.df.gov.br/mobilizacao_social', '_system')
+    this.iab.create('http://www.codhab.df.gov.br/mobilizacao_social', '_self')
   }
   goToAcessoInformacao(){
-    this.iab.create('http://www.codhab.df.gov.br/acessoainformacao', '_system')
+    this.iab.create('http://www.codhab.df.gov.br/acessoainformacao', '_self')
   }
   goToOuvidoria(){
     this.iab.create('http://www.ouv.df.gov.br/', '_system')
+  }
+  goToStations(){
+    this.nav.push('StationsPage')
+  }
+  goToRegConheca(){
+    this.iab.create('http://www.codhab.df.gov.br/pagina/19')
+  }
+  goToRegDoc(){
+    this.iab.create('http://www.codhab.df.gov.br/pagina/20')
+  }
+  goToRegTel(){
+    this.iab.create('http://www.codhab.df.gov.br')
+  }
+  goToRegReq(){
+    this.iab.create('http://www.codhab.df.gov.br/')
   }
 }

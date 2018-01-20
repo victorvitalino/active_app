@@ -4,7 +4,9 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title><img alt="logo" height="55" src="assets/imgs/logo-codhab.png" ></ion-title>
+    <ion-title>
+      <img alt="logo" height="55" src="assets/imgs/logo-codhab.png">
+    </ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -12,13 +14,29 @@
 
 <ion-content padding>
   <ion-row>
-
     <ion-col col-12>
-      <img class="qrcode" src="assets/images/qr-code-large.png"/>
-    <h3>Instruções</h3>
-    <p> 1. Para melhor funcionamento do leitor, verifique se a lente do seu dispositivo está limpa. </p>
-    <p> 2. posicione a câmera de uma forma que consiga ver o codigo legível.</p>
+      <img class="qrcode" src="assets/images/qr-code-large.png" />
     </ion-col>
   </ion-row>
-  <button ion-button (click)="scanner()">Ler QRcode</button>
+  <ion-row>
+    <ion-col col-12>
+      <h1>
+        <b>
+          Instruções
+        </b>
+      </h1>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-12>
+      <h6> 1. Para melhor funcionamento do leitor, verifique se a lente do seu dispositivo está limpa. </h6>
+      <h6> 2. posicione a câmera de uma forma que consiga ver o codigo legível.</h6>
+      <button color="energized" ion-button full (click)="scanner()" icon-start>
+        <ion-icon name="barcode"></ion-icon>
+        <b>
+          Ler Qrcode
+        </b>
+      </button>
+    </ion-col>
+  </ion-row>
 </ion-content>
