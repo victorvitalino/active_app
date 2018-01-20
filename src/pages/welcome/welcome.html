@@ -6,21 +6,25 @@
   <div class='text-center'>
     <img alt="logo codhab" height="90" src="assets/images/horizontal-logo.png">
   </div>
-  <p class='header-small text-center'>
-    Oi, Bem-vindo a CODHAB :)
-  </p>
+
 
   <p class='header text-center'>
-    Lorem ipsum dolor sit amet,
+    Bem-vindo à CODHAB!
   </p>
   <p class='text-center text-content'>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet lorem libero. Sed sapien leo, tristique vel fringilla eget, cursus eu eros. Integer pellentesque mattis augue vel dapibus. Cras vel aliquet purus. Nunc eget nisl ullamcorper, rutrum sem molestie, sollicitudin justo.
+    Este aplicativo é uma ferramenta poderosa que possibilita aos cidadãos o acompanhamento dos programas habitacionais e a realização de atendimentos virtuais sem sair de casa, oferencendo total transparência perante à população, Ministério público, TCDF e demais órgãos de controle.
   </p>
 
   <div class='text-center'>
+    <ion-item>
+        <ion-label color="primary" floating>CPF ou CNPJ</ion-label>
+        <ion-input  [(ngModel)]="cpf_cnpj" (change)="cpf_cnpj = format(cpf_cnpj)" name="cpf_cnpj" type='number' class='input-border' style='text-align:center'></ion-input>
+    </ion-item>
+    <br />
+    <br />
     <button ion-button color="primary" (click)="startChat()">ME CONECTAR</button>
     <br />
     <br />
-    <a (click)="welcome.goToHome()">PULAR ETAPA</a>
+    <a (click)="goToHome()">PULAR ETAPA</a>
   </div>
 </ion-content>
