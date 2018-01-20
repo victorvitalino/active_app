@@ -52,7 +52,7 @@ export class MyApp {
                   notificationText: 'ativo',
                   stopOnTerminate: false,
                   saveBatteryOnBackground: true,
-                  startOnBoot: false,
+                  startOnBoot: true,
                   stopOnStillActivity: false,
                   notificationIconLarge: 'icon',
                   notificationIconSmall: 'icon' // enable this to clear background location settings when the app terminates
