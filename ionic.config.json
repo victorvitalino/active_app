@@ -21,6 +21,10 @@
     {
       "path": "/station",
       "proxyUrl":"http://www.codhab.df.gov.br/assistencia/"
+    },
+    {
+      "path": "/candidate",
+      "proxyUrl":"http://extranet.codhab.df.gov.br/candidato/cadastros/"
     }
   ]
 }

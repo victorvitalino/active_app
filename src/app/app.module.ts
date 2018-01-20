@@ -28,6 +28,7 @@ import { DataServiceProvider } from '../providers/data-service/data-service';
 import { HometwoPageModule } from '../pages/hometwo/hometwo.module';
 import { NavigationPageModule } from '../pages/navigation/navigation.module';
 import { WelcomePageModule } from '../pages/welcome/welcome.module';
+import { HabitationProvider } from '../providers/habitation/habitation';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { WelcomePageModule } from '../pages/welcome/welcome.module';
     GoogleAnalytics,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DataServiceProvider,
+    HabitationProvider,
   ]
 })
 export class AppModule {}

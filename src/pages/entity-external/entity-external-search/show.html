@@ -8,9 +8,7 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-
-
-
 <ion-content padding>
+<ion-searchbar [(ngModel)]="value" (keyup.enter)="getItens(value)"></ion-searchbar>
 
 </ion-content>
