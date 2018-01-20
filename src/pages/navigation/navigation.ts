@@ -21,4 +21,8 @@ export class NavigationPage {
   goToQrCode() {
     this.navCtrl.push('QrcodePage')
   }
+
+  goToSearch() {
+    this.navCtrl.push('HabitationSearchPage')
+  }
 }
