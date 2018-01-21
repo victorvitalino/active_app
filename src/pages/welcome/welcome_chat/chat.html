@@ -4,18 +4,17 @@
   </div>
   <div [innerHTML]="typewriter_display"></div>
 
-  <div *ngIf="enable_next_button === true">
+  <div>
     <ion-item>
-        <ion-label color="primary" floating>CPF ou CNPJ</ion-label>
-        <ion-input type='number'></ion-input>
+      <ion-input [(ngModel)]="pass" name="pass" type="password" placeholder="Insira aqui sua senha."></ion-input>
     </ion-item>
 
       <div class='text-center'>
         <br/>
-        <button ion-button color="primary" (click)="startChat()">Prosseguir</button>
+        <button ion-button color="primary" (click)="sign(pass)">Prosseguir</button>
         <br/>
         <br/>
-        <a (click)="goToHome()" class='mini-link'>RECUPERAR SENHA</a>
+        <a (click)="goToPass()" class='mini-link'>RECUPERAR SENHA</a>
       </div>
   </div>
 </ion-content>

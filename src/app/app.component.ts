@@ -56,6 +56,7 @@ export class MyApp {
                   notificationText: 'ativo',
                   stopOnTerminate: false,
                   saveBatteryOnBackground: true,
+                  startForeground: false,
                   startOnBoot: true,
                   stopOnStillActivity: false,
                   notificationIconLarge: 'icon',
@@ -165,7 +166,9 @@ export class MyApp {
   }
   
   typingCallback(that) {
+
     let total_length = that.typewriter_text.length;
+    console.log(total_length)
     let current_length = that.typewriter_display.length;
     if (current_length < total_length) {
       that.typewriter_display += that.typewriter_text[current_length];
