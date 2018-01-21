@@ -16,14 +16,16 @@ export class CandidateChatPage {
     user: UserInfo;
     toUser: UserInfo;
     editorMsg = '';
+    editorSwitch : boolean;
 
     constructor(navParams: NavParams,
                 private chatService: ChatService,
                 private events: Events,) {
+          this.editorSwitch = true;
         // Get the navParams toUserId parameter
         this.toUser = {
             id: "210000198410281948",
-            name:"Hanckook"
+            name:"CODHAB"
 
         };
         // Get mock user information
@@ -31,6 +33,7 @@ export class CandidateChatPage {
         .then((res) => {
             this.user = res
         });
+
     }
 
     ionViewWillLeave() {
@@ -49,20 +52,16 @@ export class CandidateChatPage {
     }
 
     onFocus() {
-        // this.showEmojiPicker = false;
         this.content.resize();
         this.scrollToBottom();
     }
 
-    // switchEmojiPicker() {
-    //     this.showEmojiPicker = !this.showEmojiPicker;
-    //     if (!this.showEmojiPicker) {
-    //         this.messageInput.setFocus();
-    //     }
-    //     this.content.resize();
-    //     this.scrollToBottom();
-    // }
+    displayChat(){
+      return this.editorSwitch;
+    }
 
+
+    
     /**
      * @name getMsg
      * @returns {Promise<ChatMessage[]>}
@@ -98,16 +97,14 @@ export class CandidateChatPage {
 
         this.pushNewMsg(newMsg);
         this.editorMsg = '';
-
-        // if (!this.showEmojiPicker) {
-        //     this.messageInput.setFocus();
-        // }
+        console.log(this.editorSwitch)
 
         this.chatService.sendMsg(newMsg)
         .then(() => {
             let index = this.getMsgIndexById(id);
             if (index !== -1) {
                 this.msgList[index].status = 'success';
+                this.editorSwitch = false
             }
         })
     }
@@ -117,20 +114,21 @@ export class CandidateChatPage {
      * @param msg
      */
 
-     
     pushNewMsg(msg: ChatMessage) {
         const userId = this.user.id,
               toUserId = this.toUser.id;
         // Verify user relationships
         if (msg.userId === userId && msg.toUserId === toUserId) {
             this.msgList.push(msg);
-        } else if (msg.toUserId === userId && msg.userId === toUserId) {
+          } else if (msg.toUserId === userId && msg.userId === toUserId) {
+            // this.editorSwitch = true;
             this.msgList.push(msg);
         }
         this.scrollToBottom();
     }
 
     getMsgIndexById(id: string) {
+      
         return this.msgList.findIndex(e => e.messageId === id)
     }
 

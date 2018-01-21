@@ -227,4 +227,7 @@ export class MyApp {
   goToRegReq(){
     this.iab.create('http://www.codhab.df.gov.br/')
   }
+  goToConversas(){
+    this.nav.push('CandidateChatPage')
+  }
 }

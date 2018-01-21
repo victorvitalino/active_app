@@ -60,7 +60,7 @@ export class ChatService {
         const userInfo: UserInfo = {
             id: '140000198202211138',
             name: 'Maria de Jesus',
-            avatar: './assets/img/avatar/profile-1.jpg'
+            avatar: './assets/images/profile-1.jpg'
         };
         return new Promise(resolve => resolve(userInfo));
     }

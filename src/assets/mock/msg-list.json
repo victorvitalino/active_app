@@ -7,7 +7,7 @@
       "userImgUrl":"./assets/images/icon-codhab.png",
       "toUserId":"210000198410281948",
       "toUserName":"CODHAB",
-      "userAvatar":"./assets/img/avatar/profile-1.jpg",
+      "userAvatar":"./assets/images/profile-1.jpg",
       "time":1488349800000,
       "message":"Estou com problemas no meu cadastro",
       "status":"success"
@@ -17,7 +17,7 @@
       "messageId":"2",
       "userId":"210000198410281948",
       "userName":"CODHAB",
-      "userImgUrl":"./assets/img/avatar/profile-1.jpg",
+      "userImgUrl":"./assets/images/profile-1.jpg",
       "toUserId":"140000198202211138",
       "toUserName":"Maria",
       "userAvatar":"./assets/images/icon-codhab.png",

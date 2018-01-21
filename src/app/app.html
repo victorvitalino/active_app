@@ -1,7 +1,7 @@
 <ion-menu [content]="content" id="menu-material">
   <ion-content>
     <div class="menu-header">
-      <img class="user-avatar round" style="height:70px;max-width:70px;" [src]="chosenPicture || placeholder" onerror="this.src='assets/img/avatar/profile-1.jpg'">
+      <img class="user-avatar round" style="height:70px;max-width:70px;" [src]="chosenPicture || placeholder" onerror="this.src='assets/images/profile-1.jpg'">
       <h1 class="name">Frederico Maxmiliano</h1>
       <h3 class="situation">Habilitado - documentação aprovada</h3>
       <h3 class="position">Posição 15482º</h3>
@@ -39,7 +39,7 @@
         <ion-item  menuClose (click)="goToNavigationHome()">
           <span>Atualizações</span>
         </ion-item>
-        <ion-item  menuClose (click)="goToNavigationHome()">
+        <ion-item  menuClose (click)="goToConversas()">
           <span>Conversas</span>
         </ion-item>
         <ion-item  menuClose (click)="goToNavigationHome()">
