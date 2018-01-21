@@ -36,4 +36,8 @@ export class WelcomeNoUserPage {
     } else {
       that.enable_next_button = true;
     }}
+
+    goToNavigation(){
+      this.navCtrl.setRoot('NavigationPage')
+    }
 }
