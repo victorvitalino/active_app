@@ -4,7 +4,7 @@
   </div>
   <div [innerHTML]="typewriter_display"></div>
 
-  <div>
+  <div *ngIf="enable_next_button">
     <ion-item>
       <ion-input [(ngModel)]="pass" name="pass" type="number" placeholder="Insira aqui sua nova senha."></ion-input>
     </ion-item>

@@ -5,7 +5,7 @@
   <div [innerHTML]="typewriter_display"></div>
 
 
-    <div class='text-center'>
+    <div class='text-center' *ngIf="enable_next_button">
       <br/>
       <button ion-button color="primary" (click)="goToNavigation()">Entendi. Vamos lá!</button>
     </div>

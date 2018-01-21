@@ -3,16 +3,17 @@
     <img src='assets/images/avatar-robot.png' width=30% class='text-center'>
   </div>
   <div [innerHTML]="typewriter_display"></div>
-
+  <div *ngIf="enable_next_button" class='text-center'>
     <ion-item>
       <ion-input [(ngModel)]="pass" name="pass" type="password" placeholder="Insira aqui sua senha."></ion-input>
     </ion-item>
 
-      <div class='text-center'>
+      <div>
         <br/>
         <button ion-button color="primary" (click)="sign(pass)">Prosseguir</button>
         <br/>
         <br/>
         <a (click)="goToPass()" class='mini-link'>RECUPERAR SENHA</a>
+      </div>
       </div>
 </ion-content>

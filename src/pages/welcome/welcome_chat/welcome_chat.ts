@@ -24,7 +24,6 @@ export class WelcomeChatPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.cpf_cnpj = this.navParams.get('cpf_cnpj')
-    console.log(this.cpf_cnpj)
   }
 
   ngOnInit() {
