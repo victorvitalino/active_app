@@ -65,7 +65,55 @@
       </ion-grid>
     </ion-slide>
     <ion-slide>
-      <h1>Slide 2</h1>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-browser.png" menuToggle (click)='myApp.openHabitationNav(true)'></ion-img>
+            <p class='caption-icon'>Área do Candidato</p>
+          </ion-col>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-notification.png" menuToggle (click)='myApp.openRegularizationNav(true)'></ion-img>
+            <p class='caption-icon'>Notificações</p>
+          </ion-col>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-profile.png" menuToggle (click)='myApp.openEntityNav(true)'></ion-img>
+            <p class='caption-icon'>Meus Dados</p>
+          </ion-col>
+
+        </ion-row>
+        <ion-row>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-verification.png" menuToggle (click)='myApp.openPortalNav(true)'></ion-img>
+            <p class='caption-icon'>Atualizações</p>
+          </ion-col>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-chat.png" (click)="goToConversas()"></ion-img>
+            <p class='caption-icon'>Conversas</p>
+          </ion-col>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-resume.png" (click)='goToSearch();'></ion-img>
+            <p class='caption-icon'>Requerimentos</p>
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-calendar.png" menuToggle></ion-img>
+            <p class='caption-icon'>Agendamentos</p>
+          </ion-col>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-user-send.png" menuToggle></ion-img>
+            <p class='caption-icon'>Indicação à empreendimento</p>
+          </ion-col>
+          <ion-col col-4>
+            <ion-img width="50" height="50" src="assets/images/icon-notepad.png" menuToggle></ion-img>
+            <p class='caption-icon'>Pendências</p>
+          </ion-col>
+
+        </ion-row>
+
+      </ion-grid>
     </ion-slide>
   </ion-slides>
 </ion-content>
