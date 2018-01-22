@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavParams, ToastController } from 'ionic-angular';
 import { Events, Content, TextInput } from 'ionic-angular';
-import { ChatService, ChatMessage, UserInfo } from "../../providers/chat-service";
+import { ChatService, ChatMessage, UserInfo } from "../../../providers/chat-service";
 
 @IonicPage()
 @Component({
