@@ -1,3 +1,24 @@
 page-candidate-profile {
+text-align: center;
+    .profile-col{
+        h6{
+            color:#b3b1b2;
+            margin: 0!important;
+        }
+        h3{
+            color:#5e5e5e;
+            margin: 0!important;
+        }       
+    }
+    .profile-icon-area{
+        margin-top: 2%;
+    }
+    .user-name{
+        color:#4e4e4e;
+    }
+    ion-badge{
+        margin-top: 20px;
+        padding: 10px;
 
+    }
 }

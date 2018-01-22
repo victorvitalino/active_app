@@ -4,12 +4,76 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      <img alt="logo" height="55" src="assets/imgs/logo-codhab.png">
+      <h2>Meus Dados</h2>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <img src="assets/images/profile-1.jpg" />
 
+  <div padding>
+    <h2 class="user-name">
+      <b>
+        Maria de Jesus da Silva
+      </b>
+    </h2>
+    <ion-row>
+      <ion-col class="profile-col" col-4>
+        <h6 class="title">Pontuação</h6>
+        <h3 class="value">445665</h3>
+      </ion-col>
+      <ion-col class="profile-col" col-4>
+        <h6 class="title">Faixa</h6>
+        <h3 class="value">3</h3>
+      </ion-col>
+      <ion-col class="profile-col" col-4>
+        <h6 class="title">Posição</h6>
+        <h3 class="value">789656º</h3>
+      </ion-col>
+    </ion-row>
+    <ion-badge color="royal">HABILITADO - DOCUMENTAÇÃO APROVADA</ion-badge>
+  </div>
+  <div class="profile-icon-area" padding>
+    <ion-row>
+      <ion-col col-4>
+        <ion-img width="50" height="50" src="assets/images/icon-profile.png" menuToggle (click)='goToProfile()'></ion-img>
+        <p class='caption-icon'>Meus Dados</p>
+      </ion-col>
+      <ion-col col-4>
+        <ion-img width="50" height="50" src="assets/images/icon-family.png" menuToggle></ion-img>
+        <p class='caption-icon'>Meus Dependentes</p>
+      </ion-col>
+      <ion-col col-4>
+        <ion-img width="50" height="50" src="assets/images/icon-notification.png" menuToggle (click)='myApp.openRegularizationNav(true)'></ion-img>
+        <p class='caption-icon'>Notificações</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        <ion-img width="50" height="50" src="assets/images/icon-verification.png" menuToggle (click)='myApp.openPortalNav(true)'></ion-img>
+        <p class='caption-icon'>Atualizações</p>
+      </ion-col>
+      <ion-col col-4>
+        <ion-img width="50" height="50" src="assets/images/icon-chat.png" (click)="goToChat()"></ion-img>
+        <p class='caption-icon'>Conversas</p>
+      </ion-col>
+      <ion-col col-4>
+        <ion-img width="50" height="50" src="assets/images/icon-resume.png" (click)='goToSearch();'></ion-img>
+        <p class='caption-icon'>Requerimentos</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-4>
+        <ion-img width="50" height="50" src="assets/images/icon-calendar.png" menuToggle></ion-img>
+        <p class='caption-icon'>Agendamentos</p>
+      </ion-col>
+      <ion-col col-4>
+        <ion-img width="50" height="50" src="assets/images/icon-user-send.png" menuToggle></ion-img>
+        <p class='caption-icon'>Indicação à empreendimento</p>
+      </ion-col>
+
+    </ion-row>
+  </div>
 </ion-content>
