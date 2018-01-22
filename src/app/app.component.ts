@@ -4,7 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OneSignal } from '@ionic-native/onesignal';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
-import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocationResponse } from '@ionic-native/background-geolocation';
+// import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocationResponse } from '@ionic-native/background-geolocation';
 
 import { WelcomePage } from '../pages/welcome/welcome';
 
@@ -46,41 +46,41 @@ export class MyApp {
       this.ga.trackView('test');
     }).catch(e => console.log('Error starting GoogleAnalytics', e));
 
-    if (this.platform.is('cordova')){
-      const config: BackgroundGeolocationConfig = {
-                  desiredAccuracy: 10,
-                  stationaryRadius: 20,
-                  distanceFilter: 30,
-                  debug: true, //  enable this hear sounds for background-geolocation life-cycle.
-                  notificationTitle: 'CODHAB',
-                  notificationText: 'ativo',
-                  stopOnTerminate: false,
-                  saveBatteryOnBackground: true,
-                  startForeground: false,
-                  startOnBoot: true,
-                  stopOnStillActivity: false,
-                  notificationIconLarge: 'icon',
-                  notificationIconSmall: 'icon' // enable this to clear background location settings when the app terminates
-          };
+    // if (this.platform.is('cordova')){
+    //   const config: BackgroundGeolocationConfig = {
+    //               desiredAccuracy: 10,
+    //               stationaryRadius: 20,
+    //               distanceFilter: 30,
+    //               debug: true, //  enable this hear sounds for background-geolocation life-cycle.
+    //               notificationTitle: 'CODHAB',
+    //               notificationText: 'ativo',
+    //               stopOnTerminate: false,
+    //               saveBatteryOnBackground: true,
+    //               startForeground: false,
+    //               startOnBoot: true,
+    //               stopOnStillActivity: false,
+    //               notificationIconLarge: 'icon',
+    //               notificationIconSmall: 'icon' // enable this to clear background location settings when the app terminates
+    //       };
 
-        this.backgroundGeolocation.configure(config)
-          .subscribe((location: BackgroundGeolocationResponse) => {
+    //     this.backgroundGeolocation.configure(config)
+    //       .subscribe((location: BackgroundGeolocationResponse) => {
 
-            console.log(location);
+    //         console.log(location);
 
-            // IMPORTANT:  You must execute the finish method here to inform the native plugin that you're finished,
-            // and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
-            // IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
-            this.backgroundGeolocation.finish(); // FOR IOS ONLY
+    //         // IMPORTANT:  You must execute the finish method here to inform the native plugin that you're finished,
+    //         // and the background-task may be completed.  You must do this regardless if your HTTP request is successful or not.
+    //         // IF YOU DON'T, ios will CRASH YOUR APP for spending too much time in the background.
+    //         this.backgroundGeolocation.finish(); // FOR IOS ONLY
 
-          });
-      //
-      // // start recording location
-      this.backgroundGeolocation.start();
-      // //
-      // // // If you wish to turn OFF background-tracking, call the #stop method.
-      // // this.backgroundGeolocation.stop();
-    }
+    //       });
+    //   //
+    //   // // start recording location
+    //   this.backgroundGeolocation.start();
+    //   // //
+    //   // // // If you wish to turn OFF background-tracking, call the #stop method.
+    //   // // this.backgroundGeolocation.stop();
+    // }
 
     platform.ready().then(() => {
 

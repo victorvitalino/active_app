@@ -25,4 +25,7 @@ export class NavigationPage {
   goToSearch() {
     this.navCtrl.push('HabitationSearchPage')
   }
+  goToChat() {
+    this.nav.push('CandidateChatPage')
+  }
 }
