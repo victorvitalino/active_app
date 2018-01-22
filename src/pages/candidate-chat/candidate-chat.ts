@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavParams } from 'ionic-angular';
+import { IonicPage, NavParams, ToastController } from 'ionic-angular';
 import { Events, Content, TextInput } from 'ionic-angular';
 import { ChatService, ChatMessage, UserInfo } from "../../providers/chat-service";
 
@@ -20,6 +20,7 @@ export class CandidateChatPage {
 
     constructor(navParams: NavParams,
                 private chatService: ChatService,
+                private toastCtrl: ToastController,
                 private events: Events,) {
           this.editorSwitch = true;
         // Get the navParams toUserId parameter
@@ -97,7 +98,6 @@ export class CandidateChatPage {
 
         this.pushNewMsg(newMsg);
         this.editorMsg = '';
-        console.log(this.editorSwitch)
 
         this.chatService.sendMsg(newMsg)
         .then(() => {
@@ -120,8 +120,16 @@ export class CandidateChatPage {
         // Verify user relationships
         if (msg.userId === userId && msg.toUserId === toUserId) {
             this.msgList.push(msg);
+            let toast = this.toastCtrl.create({
+                message: 'Você só poderá enviar uma nova mensagem após a resposta da CODHAB',
+                position: 'bottom',
+                duration: 2000,
+                dismissOnPageChange: true
+            });
+            toast.present();
           } else if (msg.toUserId === userId && msg.userId === toUserId) {
-            // this.editorSwitch = true;
+        
+            this.editorSwitch = true;
             this.msgList.push(msg);
         }
         this.scrollToBottom();
@@ -131,12 +139,22 @@ export class CandidateChatPage {
       
         return this.msgList.findIndex(e => e.messageId === id)
     }
-
+    
     scrollToBottom() {
         setTimeout(() => {
             if (this.content.scrollToBottom) {
                 this.content.scrollToBottom();
             }
         }, 400)
+    }
+    callToast() {
+        let toast = this.toastCtrl.create({
+            message: 'Você só poderá enviar uma nova mensagem após a resposta da CODHAB',
+            position: 'top',
+            showCloseButton: true,
+            dismissOnPageChange: true
+        });
+
+        toast.present();
     }
 }

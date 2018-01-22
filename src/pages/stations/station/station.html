@@ -12,7 +12,7 @@
 <ion-content padding>
 
 <ion-card *ngFor="let item of station; let i=index">
-    <img src="assets/imgs/bsb.jpg">
+    <img src="assets/images/{{item.id}}.png">
     <ion-fab right top>
       <button ion-fab (click)="goNavigate(item.latitude, item.longitude)">
         <ion-icon name="ios-navigate-outline"></ion-icon>

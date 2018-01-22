@@ -9,8 +9,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 
 export class WelcomeNoUserPage {
-  private typewriter_text: string = "<h4><p>Olá!!! Não identifiquei seu CPF nos cadastros da CODHAB. Estou direcionando você para saber mais sobre a CODHAB e Programa Habitacionais de Interesse Social.</p>" +
-    "<p>  Você quer saber sobre: Habita Brasília, Regularização, Entidades, Assistência Técnica ou Validação de Documentos?</p></h4>"
+  private typewriter_text: string = "<h4><p>Olá!!! Não identifiquei seu CPF ou CNPJ nos cadastros da CODHAB. Estou direcionando você para saber mais sobre a CODHAB e Programa Habitacionais de Interesse Social.</p>" +
+    "<p>Você quer saber sobre: Habita Brasília, Regularização, Entidades, Assistência Técnica ou Validação de Documentos?</p></h4>"
 
   private typewriter_display: string = "";
 

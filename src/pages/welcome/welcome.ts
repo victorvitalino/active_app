@@ -73,7 +73,11 @@ export class WelcomePage {
 
 
   startChat(cpf_cnpj) {
-    this.navCtrl.push('WelcomeChatPage',{cpf_cnpj});
+    if (cpf_cnpj == '018.018.501-27') {
+      this.navCtrl.push('WelcomeChatPage',{cpf_cnpj});
+    } else {
+      this.navCtrl.push('WelcomeNoUserPage')
+    }
   }
 
   goToHome() {

@@ -1,0 +1,29 @@
+<ion-content padding>
+  <div class='text-center'>
+    <img src='assets/images/avatar-robot.png' width=30% class='text-center'>
+  </div>
+  <div>
+    <br>
+    <h1 class='text-center'>
+      <b>Senha inválida</b>
+    </h1>
+    <br>
+    <h4>
+      <p>Pesquisei em meus registros e essa senha não é válida ou está errada :(</p>
+      <p>Você pode tentar novamente mas se realmente não lembrar recomendo você recuperar sua senha.</p>
+    </h4>
+  </div>
+  <div class='text-center'>
+    <ion-item>
+      <ion-input [(ngModel)]="pass" name="pass" type="password" placeholder="Insira sua senha e tente novamente."></ion-input>
+    </ion-item>
+
+    <div>
+      <br/>
+      <button ion-button color="primary" (click)="sign(pass)">Prosseguir</button>
+      <br/>
+      <br/>
+      <a (click)="goToPass()" class='mini-link'>RECUPERAR SENHA</a>
+    </div>
+  </div>
+</ion-content>

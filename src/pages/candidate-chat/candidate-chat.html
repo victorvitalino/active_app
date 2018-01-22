@@ -51,7 +51,7 @@
   </ng-container>
   <ng-template #elseTemplate>
     
-    <ion-item>Você só poderá enviar outra Mensagem após a resposta da CODHAB</ion-item>
+    <ion-item (click)="callToast()">Aguardando resposta da CODHAB!</ion-item>
   </ng-template>
   
  

@@ -24,6 +24,7 @@ export class WelcomeChatPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.cpf_cnpj = this.navParams.get('cpf_cnpj')
+
   }
 
   ngOnInit() {
@@ -50,7 +51,8 @@ export class WelcomeChatPage {
     if(this.cpf_cnpj == "018.018.501-27" && pass == "123456"){
       this.navCtrl.setRoot('NavigationPage')
     }else{
-      console.log("Sem acesso")
+      let cpf_cnpj = this.cpf_cnpj
+      this.navCtrl.push('WelcomeWrongPassPage',{cpf_cnpj} )
     }
   }
 

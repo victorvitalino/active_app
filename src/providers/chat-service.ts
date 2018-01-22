@@ -42,7 +42,7 @@ export class ChatService {
 
         setTimeout(() => {
             this.events.publish('chat:received', mockMsg, Date.now())
-        }, Math.random() * 6800)
+        }, Math.random() * 10000)
     }
 
     getMsgList(): Observable<ChatMessage[]> {
