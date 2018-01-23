@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { OneSignal } from '@ionic-native/onesignal';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
 // import { BackgroundGeolocation, BackgroundGeolocationConfig, BackgroundGeolocationResponse } from '@ionic-native/background-geolocation';
-
+import { Geolocation } from '@ionic-native/geolocation';
 import { WelcomePage } from '../pages/welcome/welcome';
 
 import { DataServiceProvider } from '../providers/data-service/data-service';
@@ -35,12 +35,19 @@ export class MyApp {
               public splashScreen: SplashScreen,
               public menuCtrl: MenuController,
               public oneSignal: OneSignal,
+              private geolocation: Geolocation,
               // public backgroundGeolocation: BackgroundGeolocation,
               private ga: GoogleAnalytics,
               public iab:InAppBrowser,
               public dataServiceProvider: DataServiceProvider) {
 
     this.initializeApp();
+
+    this.geolocation.getCurrentPosition().then((resp) => {
+      console.log(resp)
+    }).catch((error) => {
+      console.log('Error getting location', error);
+    });
 
     this.ga.startTrackerWithId('UA-96549234-1').then(() => {
       this.ga.trackView('test');

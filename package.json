@@ -102,7 +102,7 @@
       "cordova-plugin-google-analytics": {},
       "uk.co.workingedge.phonegap.plugin.launchnavigator": {},
       "cordova-plugin-geolocation": {
-        "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
+        "GEOLOCATION_USAGE_DESCRIPTION": "CODHAB precisa de sua localização"
       }
     },
     "platforms": [

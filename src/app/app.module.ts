@@ -13,6 +13,7 @@ import { MaterialIconsModule } from 'ionic2-material-icons';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { OneSignal } from '@ionic-native/onesignal';
+import { Geolocation } from '@ionic-native/geolocation';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { LaunchNavigator } from '@ionic-native/launch-navigator';
@@ -51,6 +52,7 @@ import { HabitationProvider } from '../providers/habitation/habitation';
     BarcodeScanner,
     LaunchNavigator,
     // BackgroundGeolocation,
+    Geolocation,
     InAppBrowser,
     FileTransfer,
     FileTransferObject,

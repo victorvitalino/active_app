@@ -24,10 +24,10 @@
     <br />
     <br />
     <ng-container *ngIf="cpf_cnpj.length >= 14; else elseTemplate">
-        <button ion-button color="primary" (click)="startChat(cpf_cnpj)" >ME CONECTAR</button>
+        <button ion-button color="primary" (click)="startChat(cpf_cnpj)" >CONECTAR</button>
     </ng-container>
     <ng-template #elseTemplate>
-        <button ion-button color="primary" (click)="startChat(cpf_cnpj)" disabled>ME CONECTAR</button>
+        <button ion-button color="primary" (click)="startChat(cpf_cnpj)" disabled>CONECTAR</button>
     </ng-template>
 
     <br />
