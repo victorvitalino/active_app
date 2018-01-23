@@ -12,8 +12,8 @@ export class CandidateProfilePage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CandidateProfilePage');
-  }
 
+  goToCadastre(){
+    this.navCtrl.push('CandidateProfileCadastrePage')
+  }
 }
