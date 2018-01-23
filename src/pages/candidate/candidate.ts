@@ -15,4 +15,7 @@ export class CandidatePage {
   goToProfile(){
     this.navCtrl.push('CandidateProfilePage')
   }
+  goToNotification(){
+    this.navCtrl.push('CandidateNotificationsPage')
+  }
 }
