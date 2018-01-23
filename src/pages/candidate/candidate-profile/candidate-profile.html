@@ -48,41 +48,39 @@
         <ion-img width="50" height="50" src="assets/images/icon-profile.png" ></ion-img>
         <p class='caption-icon'>Meu Cadastro</p>
       </ion-col>
-      <ion-col col-4>
+      <ion-col col-4 (click)='goToDependents()'>
         <ion-img width="50" height="50" src="assets/images/icon-family.png"></ion-img>
         <p class='caption-icon'>Meus Dependentes</p>
       </ion-col>
-      <ion-col col-4>
+      <ion-col col-4 (click)='goToIndication()'>
         <ion-img width="50" height="50" src="assets/images/icon-user-send.png"></ion-img>
         <p class='caption-icon'>Minhas Indicações</p>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-4>
+      <ion-col col-4 (click)='goToPontuation()'>
         <ion-img width="50" height="50" src="assets/images/icon-line-chart.png"></ion-img>
         <p class='caption-icon'>Pontuações</p>
       </ion-col>
-      <ion-col col-4>
-        <ion-img width="50" height="50" src="assets/images/icon-resume.png" (click)="goToChat()"></ion-img>
-
+      <ion-col col-4 (click)='goToIptu()'>
+        <ion-img width="50" height="50" src="assets/images/icon-resume.png"></ion-img>
         <p class='caption-icon'>Ocorrências de IPTU</p>
       </ion-col>
-      <ion-col col-4>
-        <ion-img width="50" height="50" src="assets/images/icon-networking.png" (click)='goToSearch();'></ion-img>
-
+      <ion-col col-4 (click)='goToEntity()'>
+        <ion-img width="50" height="50" src="assets/images/icon-networking.png"></ion-img>
         <p class='caption-icon'>Minha Entidade</p>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-4>
+      <ion-col col-4 (click)='goToSituation()'>
         <ion-img width="50" height="50" src="assets/images/icon-verification.png"></ion-img>
         <p class='caption-icon'>Minhas Situações</p>
       </ion-col>
-      <ion-col col-4>
+      <ion-col col-4 (click)='goToAddress()'>
         <ion-img width="50" height="50" src="assets/images/icon-user.png"></ion-img>
         <p class='caption-icon'>Endereço Vinculado</p>
       </ion-col>
-      <ion-col col-4>
+      <ion-col col-4 (click)='goToDocuments()'>
         <ion-img width="50" height="50" src="assets/images/icon-resumes.png"></ion-img>
         <p class='caption-icon'>Processos / Documentos</p>
       </ion-col>

@@ -14,6 +14,39 @@ export class CandidateProfilePage {
 
 
   goToCadastre(){
-    this.navCtrl.push('CandidateProfileCadastrePage')
+    this.navCtrl.push('CandidateProfileCadastrePage');
+  }
+  goToDependents(){
+    this.navCtrl.push('CandidateProfileDependentsPage');
+  }
+  goToAddress(){
+    this.navCtrl.push('CandidateProfileAddressVinculationPage');
+  }
+  goToDocuments(){
+    this.navCtrl.push('CandidateProfileDocumentsPage');
+  }
+  goToEntity(){
+    this.navCtrl.push('CandidateProfileEntityPage');
+  }
+  goToIndication(){
+    this.navCtrl.push('CandidateProfileIndicationPage');
+  }
+  goToIptu(){
+    this.navCtrl.push('CandidateProfileIptuPage');
+  }
+  goToPontuation(){
+    this.navCtrl.push('CandidateProfilePontuationPage');
+  }
+  goToSituation(){
+    this.navCtrl.push('CandidateProfileSituationPage');
+  }
+  goToRequirements(){
+    this.navCtrl.push('CandidateProfileRequirementsPage');
+  }
+  goToSchedules(){
+    this.navCtrl.push('CandidateProfileSchedulesPage');
+  }
+  goToUpdates(){
+    this.navCtrl.push('CandidateProfileUpdatesPage');
   }
 }
