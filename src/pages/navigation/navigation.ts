@@ -28,4 +28,5 @@ export class NavigationPage {
   goToChat() {
     this.navCtrl.push('CandidateChatPage')
   }
+  
 }

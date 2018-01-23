@@ -4,12 +4,23 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      <img alt="logo" height="55" src="assets/imgs/logo-codhab.png">
+      <h2>Meus Requerimentos</h2>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <div padding>
+    <button ion-button color="Energized" (click)="goToNew()" block>ENVIAR NOVO REQUERIMENTO</button>
+  </div>
+  <ion-card (click)="goToDetail()">
+    <button ion-item>
+      <ion-icon name="ios-list-box-outline" color="energized" item-start></ion-icon>
+      <b>Requerimento - 198532/2018</b>
+      <small>03/01/2018 - 15:34</small>
+    </button>
+  </ion-card>
+
 
 </ion-content>

@@ -236,4 +236,25 @@ export class MyApp {
   goToProfile() {
     this.nav.push('CandidateProfilePage')
   }
+  goToIndications() {
+    this.nav.push('CandidateProfileIndicationPage')
+  }
+  goToNotification() {
+    this.nav.push('CandidateNotificationsPage')
+  }
+  goToCadastre() {
+    this.nav.push('CandidateProfileCadastrePage');
+  }
+  goToUpdates() {
+    this.nav.push('CandidateUpdatesPage');
+  }
+  goToRequirements() {
+    this.nav.push('CandidateRequirementsPage');
+  }
+  goToSchedules() {
+    this.nav.push('CandidateSchedulesPage');
+  }
+  goToIndication() {
+    this.nav.push('CandidateProfileIndicationPage');
+  }
 }

@@ -18,4 +18,20 @@ export class CandidatePage {
   goToNotification(){
     this.navCtrl.push('CandidateNotificationsPage')
   }
+  goToUpdates(){
+    this.navCtrl.push('CandidateUpdatesPage')
+  }
+  goToChat(){
+    this.navCtrl.push('CandidateChatPage')
+  }
+  goToRequirements(){
+    this.navCtrl.push('CandidateRequirementsPage')
+  }
+  goToSchedules(){
+    this.navCtrl.push('CandidateSchedulesPage')
+  }
+  goToIndications(){
+    this.navCtrl.push('CandidateProfileIndicationPage')
+  }
+  
 }

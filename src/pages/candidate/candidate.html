@@ -24,7 +24,7 @@
   </ion-row>
   <ion-row>
     <ion-col col-4>
-      <ion-img width="50" height="50" src="assets/images/icon-verification.png"  (click)='myApp.openPortalNav(true)'></ion-img>
+      <ion-img width="50" height="50" src="assets/images/icon-verification.png"  (click)='goToUpdates()'></ion-img>
       <p class='caption-icon'>Atualizações</p>
     </ion-col>
     <ion-col col-4>
@@ -32,17 +32,17 @@
       <p class='caption-icon'>Conversas</p>
     </ion-col>
     <ion-col col-4>
-      <ion-img width="50" height="50" src="assets/images/icon-resume.png" (click)='goToSearch();'></ion-img>
+      <ion-img width="50" height="50" src="assets/images/icon-resume.png" (click)="goToRequirements()"></ion-img>
       <p class='caption-icon'>Requerimentos</p>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col col-4>
-      <ion-img width="50" height="50" src="assets/images/icon-calendar.png" ></ion-img>
+      <ion-img width="50" height="50" src="assets/images/icon-calendar.png" (click)="goToSchedules()"></ion-img>
       <p class='caption-icon'>Agendamentos</p>
     </ion-col>
     <ion-col col-4>
-      <ion-img width="50" height="50" src="assets/images/icon-user-send.png" ></ion-img>
+      <ion-img width="50" height="50" src="assets/images/icon-user-send.png" (click)="goToIndications()" ></ion-img>
       <p class='caption-icon'>Indicação à empreendimento</p>
     </ion-col>
 
