@@ -1,0 +1,15 @@
+<ion-content padding>
+  <div class='text-center'>
+    <img src='assets/images/avatar-robot.png' width=30% class='text-center'>
+  </div>
+  <div [innerHTML]="typewriter_display"></div>
+  <div *ngIf="enable_next_button" class='text-center'>
+
+    <div>
+      <br/>
+      <button ion-button color="primary" (click)="goToMain()">Finalizar</button>
+      <br/>
+      <br/>
+    </div>
+  </div>
+</ion-content>

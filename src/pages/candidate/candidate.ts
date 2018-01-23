@@ -33,5 +33,7 @@ export class CandidatePage {
   goToIndications(){
     this.navCtrl.push('CandidateProfileIndicationPage')
   }
-  
+  goToWallet(){
+    this.navCtrl.push('CandidateProfileIncomePage')
+  }
 }

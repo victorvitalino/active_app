@@ -36,7 +36,6 @@ export class MyApp {
               public menuCtrl: MenuController,
               public oneSignal: OneSignal,
               private geolocation: Geolocation,
-              // public backgroundGeolocation: BackgroundGeolocation,
               private ga: GoogleAnalytics,
               public iab:InAppBrowser,
               public dataServiceProvider: DataServiceProvider) {

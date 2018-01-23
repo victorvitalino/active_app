@@ -49,4 +49,7 @@ export class CandidateProfilePage {
   goToUpdates(){
     this.navCtrl.push('CandidateProfileUpdatesPage');
   }
+  goToWallet(){
+    this.navCtrl.push('CandidateProfileIncomePage')
+  }
 }

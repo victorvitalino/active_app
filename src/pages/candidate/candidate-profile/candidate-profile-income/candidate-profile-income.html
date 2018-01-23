@@ -1,0 +1,18 @@
+<ion-content padding>
+  <div class='text-center'>
+    <img src='assets/images/avatar-robot.png' width=30% class='text-center'>
+  </div>
+  <div [innerHTML]="typewriter_display"></div>
+  <div *ngIf="enable_next_button" class='text-center'>
+  <ion-item>
+    <ion-input [(ngModel)]="income" name="income" type="number" placeholder="Digite aqui sua renda. (Apenas números)"></ion-input>
+  </ion-item>
+
+    <div>
+      <br/>
+      <button ion-button color="primary" (click)="goToNew(income)">Prosseguir</button>
+      <br/>
+      <br/>
+    </div>
+  </div>
+</ion-content>

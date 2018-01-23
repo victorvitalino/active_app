@@ -1,0 +1,22 @@
+<ion-content padding>
+  <div class='text-center'>
+    <img src='assets/images/avatar-robot.png' width=30% class='text-center'>
+  </div>
+  <div [innerHTML]="typewriter_display"></div>
+  <div *ngIf="enable_next_button" class='text-center'>
+
+    <div>
+      <ion-item>
+        <!-- <p>{{imageURI}}</p> -->
+        <button ion-button color="secondary" (click)="getImage()"block>Tirar Foto</button>
+      </ion-item>
+      <ion-item>
+        <h4>Pré-Visualização</h4>
+        <img src="{{imageURI}}" *ngIf="imageURI" alt="Ionic File" width="300" />
+      </ion-item>
+      <ion-item>
+        <button ion-button (click)="goToIncomeDone()"block>Atualizar</button>
+      </ion-item>
+    </div>
+  </div>
+</ion-content>
