@@ -22,6 +22,7 @@ import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 import { Camera } from '@ionic-native/camera';
 import { GoogleAnalytics } from '@ionic-native/google-analytics';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 /* Page Modules */
 import { NavigationPageModule } from '../pages/navigation/navigation.module';
@@ -30,6 +31,7 @@ import { WelcomePageModule } from '../pages/welcome/welcome.module';
 /* Providers */
 import { DataServiceProvider } from '../providers/data-service/data-service';
 import { HabitationProvider } from '../providers/habitation/habitation';
+import { LoginServiceProvider } from '../providers/login-service/login-service';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { HabitationProvider } from '../providers/habitation/habitation';
     StatusBar,
     SplashScreen,
     OneSignal,
+    NativeStorage,
     BarcodeScanner,
     LaunchNavigator,
     // BackgroundGeolocation,
@@ -62,6 +65,7 @@ import { HabitationProvider } from '../providers/habitation/habitation';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DataServiceProvider,
     HabitationProvider,
+    LoginServiceProvider,
   ]
 })
 export class AppModule {}
