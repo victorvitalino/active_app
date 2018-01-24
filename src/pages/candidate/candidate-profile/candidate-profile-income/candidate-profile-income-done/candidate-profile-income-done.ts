@@ -4,10 +4,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-candidate-profile-page-income-done',
-  templateUrl: 'candidate-profile-page-income-done.html',
+  selector: 'page-candidate-profile-income-done',
+  templateUrl: 'candidate-profile-income-done.html',
 })
-export class CandidateProfilePageIncomeDonePage {
+export class CandidateProfileIncomeDonePage {
   private typewriter_text: string = "<br><h1 class='text-center'><b>Parabéns você atualizou sua renda</h1></b><br>" +
     "<h4><p>Viu como foi simples?</p>" +
     "<h4><p>Agora é com a gente... Nossos atendentes validarão os documentos enviados...</p>" +
@@ -38,7 +38,7 @@ export class CandidateProfilePageIncomeDonePage {
       that.enable_next_button = true;
     }
   }
-  goToMain(){
-    this.navCtrl.push("NavigationPage")
+  goToMain() {
+    this.navCtrl.setRoot("NavigationPage")
   }
 }

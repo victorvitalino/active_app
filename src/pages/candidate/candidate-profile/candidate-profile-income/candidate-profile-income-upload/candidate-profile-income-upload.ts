@@ -12,8 +12,8 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
   templateUrl: 'candidate-profile-income-upload.html',
 })
 export class CandidateProfileIncomeUploadPage {
-  imageURI: any;
-  imageFileName: any;
+  imageURI: string;
+  imageFileName: string;
 
   private typewriter_text: string = "<br><h1 class='text-center'><b>Tire a foto do seu documento</h1></b><br>" +
     "<h4><p>Basta Clicar em Tirar foto</p>" +
@@ -90,7 +90,7 @@ export class CandidateProfileIncomeUploadPage {
   }
   
   goToIncomeDone() {
-    this.navCtrl.push("CandidateProfilePageIncomeDonePage")
+    this.navCtrl.push("CandidateProfileIncomeDonePage")
   }
   presentToast(msg) {
     let toast = this.toastCtrl.create({
